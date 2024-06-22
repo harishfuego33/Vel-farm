@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 const Home = () => {
   return (
     <main className="home__main">

@@ -53,6 +53,8 @@ body,
   display: flex;
   align-items: center;
   gap: 2rem;
+  animation: slide-down 1s;
+  animation-delay: 0.3s;
 }
 .main-title {
   font-size: 3rem;
@@ -63,6 +65,8 @@ body,
   display: flex;
   align-items: center;
   gap: 4rem;
+  animation: slide-down 1s;
+  animation-delay: 0.3s;
 }
 .nav-bar__option {
   list-style: none;
@@ -117,12 +121,16 @@ body,
   font-size: 10rem;
   font-weight: 400;
   height: 10rem;
+  animation: slide-right 1s;
+  animation-delay: 0.2s;
 }
 .greet__name {
   font-size: 13rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
   height: 16rem;
+  animation: slide-left 1s;
+  animation-delay: 0.2s;
 }
 .greet__para {
   font-size: 1.8rem;
@@ -138,10 +146,13 @@ body,
   background-color: hsla(0, 0%, 100%, 0.135);
   border: none;
   border-radius: 5px;
+  animation: pop-up 1s;
+  transition: all 0.3s;
 }
 .greet__btn:hover {
   color: rgb(0, 0, 0);
   background-color: white;
+  transform: translateY(-5px);
 }
 .agriculture_section {
   min-height: 100vh;
@@ -188,6 +199,46 @@ body,
   height: 53rem;
   box-shadow: 0 1.5rem 4rem rgb(15, 14, 14);
   border-radius: 2rem;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-300px);
+  }
+  80% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(300px);
+  }
+  80% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 @keyframes slide {
   0% {
