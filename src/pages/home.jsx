@@ -3,6 +3,7 @@ const Home = () => {
     <main className="home__main">
       <Greet />
       <AgricultureSustainblity />
+      <Supplies />
     </main>
   );
 };
@@ -132,5 +133,126 @@ const AgricultureSustainblity = () => {
     </section>
   );
 };
-
+const Supplies = () => {
+  return (
+    <section className="supplies_section">
+      <h1 className="heading__primary">
+        Nationwide Supplier of <span className="secondary__color">Mature</span>
+        and <span className="secondary__color">Tender</span>Coconuts
+      </h1>
+      <div className="cards">
+        <div className="ag-titile card-0">
+          {" "}
+          <h3> Modern farming techniques</h3>
+        </div>
+        <div className="card card-1">
+          <div className="card__img-box">
+            <img
+              src="/assets/cards/card-1.webp"
+              alt="farms-log"
+              className="galary-img"
+            />
+          </div>
+          <h4 className="card__heading">
+            <span className="card__heading-span">FRESH GREEEN</span>
+            <span className="card__heading-span"> COCONUTS</span>
+          </h4>
+          <ul className="card__list">
+            <ll className="card__list-items">
+              <span className="dark--green">Price:</span>
+              <span className="rupess">₹</span>29/kg |{" "}
+              <span className="dark--green">Price per ton:</span>{" "}
+              <span className="rupess">₹</span>
+              29,000
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">Yield Time:</span> 35-45 days
+            </ll>
+            <ll className="card__list-items">
+              <span className="dark--green">DISCRIPTION:</span> Young coconuts
+              with a green outer husk and soft, jelly like meat inside
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">SUPPLY FOCUS:</span> Mainly
+              distributed within Tamil Nadu.
+            </ll>
+          </ul>
+        </div>
+        <div className="card card-2">
+          <div className="card__img-box">
+            <img
+              src="/assets/cards/card-2.webp"
+              alt="farms-log"
+              className="galary-img"
+            />
+          </div>
+          <h4 className="card__heading">
+            <span className="card__heading-span"> SEMI HUSK</span>
+            <span className="card__heading-span"> COCONUTS</span>
+          </h4>
+          <ul className="card__list">
+            <ll className="card__list-items">
+              <span className="dark--green">Price:</span>
+              <span className="rupess">₹</span>31/kg |{" "}
+              <span className="dark--green">Price per ton:</span>{" "}
+              <span className="rupess">₹</span>
+              31,000
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">Yield Time:</span> 50 and above days
+            </ll>
+            <ll className="card__list-items">
+              <span className="dark--green">DISCRIPTION:</span> Fully matured
+              with a thick black husk. Robust flavor used for oil extraction and
+              culinary purposes.
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">SUPPLY FOCUS:</span>Northern India
+              and international export markets.
+            </ll>
+          </ul>
+        </div>
+        <div className="card card-3">
+          <div className="card__img-box">
+            <img
+              src="/assets/cards/card-3.webp"
+              alt="farms-log"
+              className="galary-img"
+            />
+          </div>
+          <h4 className="card__heading">
+            <span className="card__heading-span">HUSK OR BLACK</span>
+            <span className="card__heading-span"> COCONUTS</span>
+          </h4>
+          <ul className="card__list">
+            <ll className="card__list-items">
+              <span className="dark--green">Price:</span>
+              <span className="rupess">₹</span>35/kg |{" "}
+              <span className="dark--green">Price per ton:</span>{" "}
+              <span className="rupess">₹</span>
+              35,000
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">Yield Time:</span> 50 and above days
+            </ll>
+            <ll className="card__list-items">
+              <span className="dark--green">DISCRIPTION:</span> Semi husk
+              coconuts have a partially removed husk, revealing the hard shell.
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">SUPPLY FOCUS:</span> Mainly
+              distributed within Tamil Nadu.
+            </ll>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
 export default Home;
