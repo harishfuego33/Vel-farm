@@ -51,7 +51,7 @@ body,
   height: 6rem;
   padding-inline: 3rem;
   background-color: rgba(97, 97, 97, 0.4);
-  backdrop-filter: blur(3px) brightness(90%);
+  backdrop-filter: blur(3px) brightness(110%);
   color: white;
 }
 .title-box {
@@ -366,13 +366,16 @@ body,
   min-height: 100vh;
 }
 .contact__img-box {
-  background-image: url("../public/assets/pages/contact.webp");
+  background-image: url("../public/assets/pages/contact-2.webp");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   height: 30rem;
   padding: 6rem 6rem 6rem 6rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .contact__img-box::after {
   content: "";
@@ -388,7 +391,42 @@ body,
 .contact__title {
   z-index: 10;
   position: relative;
+  animation: slide-right 1s;
 }
+.location-box {
+  position: relative;
+  width: 30rem;
+  padding: 2rem;
+  color: white;
+  background-color: rgba(209, 209, 209, 0.3);
+  z-index: 10;
+  border-radius: 3px;
+}
+.location-place {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.location-name {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+.location-info {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+.locator-link {
+  text-decoration: none;
+  animation: slide-left 1s;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s;
+}
+.locator-link:hover {
+  transform: translateY(-1rem);
+}
+
 @keyframes pop-up {
   0% {
     transform: scale(0.6);
