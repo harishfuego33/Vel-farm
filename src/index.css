@@ -83,6 +83,9 @@ body,
 .nav-bar__option:hover {
   border-bottom: 2px solid white;
 }
+.underlined {
+  border-bottom: 2px solid white;
+}
 .logo {
   width: 4rem;
   height: 4rem;
@@ -93,7 +96,7 @@ body,
 }
 .greets__section {
   min-height: 100vh;
-  background-image: url(../public/assets/home.webp);
+  background-image: url(../public/assets/pages/home.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -122,6 +125,7 @@ body,
   gap: 0;
 }
 .greet__welcome {
+  color: white;
   display: inline;
   font-size: 10rem;
   font-weight: 400;
@@ -221,6 +225,7 @@ body,
 .ag-title {
   height: 6rem;
   width: 50%;
+  max-width: 37rem;
   padding: 1.5rem;
   margin-bottom: 0.5rem;
   display: flex;
@@ -245,11 +250,13 @@ body,
 }
 .cards {
   display: grid;
-  grid-template-columns: 0.1fr repeat(3, 0.3fr) 0.1fr;
+  grid-template-columns: 0.1fr repeat(3, 0.9fr) 0.1fr;
   grid-template-rows: min-content 1fr;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  /* grid-template-columns: 0.1fr repeat(auto-fit, minmax(200px, 1fr)) 0.1fr; */
   grid-template-areas:
     "card-0 card-0 .  . .         "
-    ". card-1 card-2 card-3 .";
+    ". card-1 card-2 card-3 . ";
   column-gap: 5rem;
   row-gap: 2rem;
 }
@@ -274,6 +281,7 @@ body,
   overflow: hidden;
   position: relative;
   transition: all 0.3s;
+  min-width: 287px;
 }
 .card:hover {
   transform: translateY(-1rem);
@@ -333,6 +341,53 @@ body,
 }
 .card__list-items:not(:last-child) {
   border-bottom: 1px solid rgb(191, 189, 189);
+}
+.cards-2 {
+  display: grid;
+  grid-template-columns: 0.2fr repeat(2, 0.27fr) 0.2fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    " card-A card-A card-A  . "
+    ". card-B card-C .  ";
+  column-gap: 5rem;
+  row-gap: 2rem;
+}
+.card-A {
+  grid-area: card-A;
+}
+.card-B {
+  grid-area: card-B;
+}
+.card-C {
+  grid-area: card-C;
+}
+/* contact pages*/
+.contact__main {
+  min-height: 100vh;
+}
+.contact__img-box {
+  background-image: url("../public/assets/pages/contact.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 30rem;
+  padding: 6rem 6rem 6rem 6rem;
+  position: relative;
+}
+.contact__img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+.contact__title {
+  z-index: 10;
+  position: relative;
 }
 @keyframes pop-up {
   0% {

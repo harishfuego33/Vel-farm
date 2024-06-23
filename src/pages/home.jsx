@@ -261,12 +261,12 @@ const SuppliesCoconutVarieties = () => {
 const MatureCoconutVarieties = () => {
   return (
     <section className="supplies_section">
-      <div className="cards">
-        <div className="ag-title card-0">
+      <div className="cards-2">
+        <div className="ag-title card-A">
           {" "}
           <h3> Tender coconut varieties</h3>
         </div>
-        <div className="card card-1">
+        <div className="card card-B">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-4.webp"
@@ -285,16 +285,20 @@ const MatureCoconutVarieties = () => {
             </ll>
             <ll className="card__list-items">
               {" "}
-              <span className="dark--green">Yield Time:</span> 400-500 ml of
+              <span className="dark--green">Water capacity:</span> 400-500 ml of
               coconut water
             </ll>
             <ll className="card__list-items">
-              <span className="dark--green">CHARACTERISTICS:</span>Larger size,
+              {" "}
+              <span className="dark--green">Yield Time:</span> 25-35 days
+            </ll>
+            <ll className="card__list-items">
+              <span className="dark--green">CHARACTERISTICS: </span>Larger size,
               thick green husk, sweet and abundant water.
             </ll>
           </ul>
         </div>
-        <div className="card card-2">
+        <div className="card card-C">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-5.webp"
@@ -313,8 +317,12 @@ const MatureCoconutVarieties = () => {
             </ll>
             <ll className="card__list-items">
               {" "}
-              <span className="dark--green">Yield Time:</span> 400-500 ml of
+              <span className="dark--green">Water capacity:</span> 400-500 ml of
               coconut water
+            </ll>
+            <ll className="card__list-items">
+              {" "}
+              <span className="dark--green">Yield Time:</span> 25-35 days``
             </ll>
             <ll className="card__list-items">
               <span className="dark--green">CHARACTERISTICS:</span> Smaller
