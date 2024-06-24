@@ -1,3 +1,10 @@
 .underlined {
   border-bottom: 2px solid white !important;
 }
+.hr {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-block: 0.5rem;
+  background-color: gray;
+}

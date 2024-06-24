@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
+import { FaPhoneAlt } from "react-icons/fa";
 const Contact = () => {
   return (
     <main className="contact__main">
@@ -38,13 +39,20 @@ const ContactSection = () => {
       </div>
 
       <div className="contact__details">
-        <div className="contact__address">
-          <h1 className="">GET IN TOUCH</h1>
-          <p>
-            &quot; Together, we grow strong like a coconut tree, thriving with
-            unity and purpose. &quot;
+        <div className="contact__address-box">
+          <h1 className="contact__get-in">GET IN TOUCH</h1>
+          <p className="contact__quotes">
+            &quot;Together, we grow strong like a coconut tree, thriving with
+            unity and purpose.&quot;
           </p>
-          <hr />
+          <span className="hr"></span>
+          <p className="contact__address">
+            <span className="dark--green">Address: </span> NO 3/254 AMICHIA
+            GOUNDANUR REDIYARUR POLLACHI Coimbatore TN 642007 INDIA
+          </p>
+          <p className="contact__address">
+            <span className="dark--green">Call us: </span> 9865987603
+          </p>
         </div>
         <div className="contact__map">
           <iframe
@@ -53,7 +61,7 @@ const ContactSection = () => {
           ></iframe>
         </div>
       </div>
-      <div className="contact">
+      <div className="contact__mail-box">
         <div className="contact__mail">
           <h1 className="contact__mail-us">MAIL US</h1>
           <form action="#" className="contact__form">
