@@ -10,8 +10,8 @@ const Home = () => {
 };
 const Greet = () => {
   return (
-    <section className="greets__section">
-      <article className="greets">
+    <section className="greet__section">
+      <article className="greet__section-article">
         <h1 className="greet__welcome">WELCOME TO</h1>
         <span className="greet__name">VEL FARMS</span>
         <p className="greet__para">

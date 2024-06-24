@@ -1,0 +1,120 @@
+.contact__img-box {
+  background-image: url("../public/assets/pages/contact-2.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 28rem;
+  padding: 10rem 6rem 6rem 6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.183);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+  }
+}
+.contact__title {
+  z-index: 10;
+  position: relative;
+  animation: slide-right 1s;
+}
+.location {
+  &-box {
+    position: relative;
+    width: 30rem;
+    padding: 2rem;
+    color: white;
+    background-color: rgba(209, 209, 209, 0.3);
+    z-index: 10;
+    border-radius: 3px;
+  }
+  &-place {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &-name {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+  }
+  &-info {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  &-link {
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s;
+    animation: slide-left 1s;
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
+}
+
+.contact {
+  &__details {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+  }
+  &__mail {
+    width: 50%;
+
+    &-us {
+      color: var(--primary-color);
+      font-size: 3rem;
+      font-weight: 400;
+    }
+  }
+  &__input-info {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    &::after {
+      content: " *";
+      color: red;
+    }
+  }
+  &__input-field {
+    width: 100%;
+    height: 3rem;
+    border-radius: 4px;
+    border: 1px solid gray;
+    padding: 0 1rem;
+  }
+  &__address {
+    width: 50%;
+  }
+  &__map {
+    width: 50%;
+  }
+  &__mail-btn {
+    width: 6rem;
+    height: 3rem;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+  }
+}
+.map {
+  width: 100%;
+  height: 35rem;
+  &-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.description-custom {
+  resize: none;
+  min-height: 8rem;
+  max-height: 8rem;
+  padding-block: 1rem;
+}

@@ -11,7 +11,7 @@ const NavBar = () => {
       </div>
       <ul className="nav-bar__options ">
         <NavBtn name={"Home"} to={"/"} />
-        <NavBtn name={"Farm"} to={"/farm"} />
+        <NavBtn name={"Farms"} to={"/farm"} />
         <NavBtn name={"Product"} to={"/product"} />
         <NavBtn name={"About us"} to={"/about"} />
         <NavBtn name={"Contact us"} to={"/contact"} />

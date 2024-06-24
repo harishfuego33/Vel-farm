@@ -1,0 +1,113 @@
+.cards {
+  display: grid;
+  grid-template-columns: 0.1fr repeat(3, 0.9fr) 0.1fr;
+  grid-template-rows: min-content 1fr;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  /* grid-template-columns: 0.1fr repeat(auto-fit, minmax(200px, 1fr)) 0.1fr; */
+  grid-template-areas:
+    "card-0 card-0 .  . .         "
+    ". card-1 card-2 card-3 . ";
+  column-gap: 5rem;
+  row-gap: 2rem;
+}
+.card-0 {
+  width: 100%;
+  grid-area: card-0;
+}
+.card-1 {
+  grid-area: card-1;
+}
+.card-2 {
+  grid-area: card-2;
+}
+.card-3 {
+  grid-area: card-3;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1.5rem 4rem rgb(15, 14, 14);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+  min-width: 287px;
+}
+.card:hover {
+  transform: translateY(-1rem);
+}
+.card__img-box {
+  width: 100%;
+  height: 20rem;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+}
+.card__img-box::before {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.463);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: white;
+  position: absolute;
+  top: 7rem;
+  right: 0rem;
+  width: 100%;
+  z-index: 10;
+  cursor: default;
+}
+.card__heading-span {
+  padding: 0 1.5rem;
+  background-color: rgba(0, 0, 0, 0.463);
+  box-decoration-break: clone;
+  -webkit-box-direction-break: clone;
+}
+.card__list-items {
+  display: block;
+  padding: 0.9rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  cursor: default;
+}
+.rupees {
+  color: var(--territory);
+  font-weight: 600;
+}
+.dark--green {
+  color: var(--primary-color);
+  font-weight: 800;
+}
+.card__list-items:not(:last-child) {
+  border-bottom: 1px solid rgb(191, 189, 189);
+}
+.cards-2 {
+  display: grid;
+  grid-template-columns: 0.2fr repeat(2, 0.27fr) 0.2fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    " card-A card-A card-A  . "
+    ". card-B card-C .  ";
+  column-gap: 5rem;
+  row-gap: 2rem;
+}
+.card-A {
+  grid-area: card-A;
+}
+.card-B {
+  grid-area: card-B;
+}
+.card-C {
+  grid-area: card-C;
+}
