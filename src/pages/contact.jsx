@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
-import { FaPhoneAlt } from "react-icons/fa";
+import axios from "axios";
 const Contact = () => {
   return (
     <main className="contact__main">
@@ -10,10 +10,33 @@ const Contact = () => {
 };
 const ContactSection = () => {
   const style = { height: "2.5rem", width: "2.5rem" };
-  const [fullName, setFullName] = useState("");
-  const [mailId, setMailId] = useState("");
-  const [subject, setSubject] = useState("");
-  const [description, setDescription] = useState("");
+  const [fullName, setFullName] = useState("harish kumar");
+  const [mailId, setMailId] = useState("harishsugumar33@gmail.com");
+  const [subject, setSubject] = useState("Request for sale product");
+  const [description, setDescription] = useState(
+    "i need of 40 byproduct of the you farms"
+  );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/contact", {
+        fullName,
+        mailId,
+        subject,
+        description,
+      });
+      console.log(response.data);
+      if (response.data.success) {
+        console.log("Email sent successfully!");
+      } else {
+        console.log("Failed to send email!");
+      }
+    } catch (error) {
+      console.log("Failed to send email!");
+      console.error("Error sending email:", error);
+    }
+  };
   return (
     <section className="contact__section">
       <div className="contact__img-box">
@@ -38,75 +61,75 @@ const ContactSection = () => {
         </a>
       </div>
 
-      <div className="contact__details">
-        <div className="contact__address-box">
-          <h1 className="contact__get-in">GET IN TOUCH</h1>
-          <p className="contact__quotes">
-            &quot;Together, we grow strong like a coconut tree, thriving with
-            unity and purpose.&quot;
-          </p>
-          <span className="hr"></span>
-          <p className="contact__address">
-            <span className="dark--green">Address: </span> NO 3/254 AMICHIA
-            GOUNDANUR REDIYARUR POLLACHI Coimbatore TN 642007 INDIA
-          </p>
-          <p className="contact__address">
-            <span className="dark--green">Call us: </span> 9865987603
-          </p>
+      <div className="contact">
+        <div className="contact__details">
+          <div className="contact__address-box">
+            <h1 className="contact__get-in">GET IN TOUCH</h1>
+            <p className="contact__quotes">
+              &quot;Together, we grow strong like a coconut tree, thriving with
+              unity and purpose.&quot;
+            </p>
+            <span className="hr"></span>
+            <p className="contact__address">
+              <span className="dark--green">Address: </span> NO 3/254 AMICHIA
+              GOUNDANUR REDIYARUR POLLACHI Coimbatore TN 642007 INDIA
+            </p>
+            <p className="contact__address">
+              <span className="dark--green">Call us: </span> 9865987603
+            </p>
+          </div>
+          <div className="contact__mail">
+            <h1 className="contact__mail-us">MAIL US</h1>
+            <form className="contact__form" onSubmit={handleSubmit}>
+              <div className="contact__first-name">
+                <p className="contact__input-info">FULL NAME</p>
+                <input
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="contact__input-field"
+                  required
+                />
+              </div>
+              <div className="contact__first-name">
+                <p className="contact__input-info">E-MAIL ID</p>
+                <input
+                  type="email"
+                  className="contact__input-field"
+                  value={mailId}
+                  onChange={(e) => setMailId(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="contact__first-name">
+                <p className="contact__input-info">SUBJECT</p>
+                <input
+                  type="text"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  className="contact__input-field"
+                  required
+                />
+              </div>
+              <div className="contact__first-name">
+                <p className="contact__input-info">DESCRIPTION</p>
+                <textarea
+                  type="text"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  className="contact__input-field description-custom"
+                  required
+                />
+              </div>
+              <button className="contact__mail-btn">MAIL</button>
+            </form>
+          </div>
         </div>
         <div className="contact__map">
           <iframe
             className="map-img"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.603234970942!2d77.2492482!3d10.704844699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9cb67cae4dd49%3A0x78ea3a13793335f1!2sVel%20Farms!5e1!3m2!1sen!2sin!4v1719210551960!5m2!1sen!2sin"
           ></iframe>
-        </div>
-      </div>
-      <div className="contact__mail-box">
-        <div className="contact__mail">
-          <h1 className="contact__mail-us">MAIL US</h1>
-          <form action="#" className="contact__form">
-            <div className="contact__first-name">
-              <p className="contact__input-info">FULL NAME</p>
-              <input
-                type="text"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                className="contact__input-field"
-                required
-              />
-            </div>
-            <div className="contact__first-name">
-              <p className="contact__input-info">E-MAIL ID</p>
-              <input
-                type="email"
-                className="contact__input-field"
-                value={mailId}
-                onChange={(e) => setMailId(e.target.value)}
-                required
-              />
-            </div>
-            <div className="contact__first-name">
-              <p className="contact__input-info">SUBJECT</p>
-              <input
-                type="email"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                className="contact__input-field"
-                required
-              />
-            </div>
-            <div className="contact__description">
-              <p className="contact__input-info">DESCRIPTION</p>
-              <textarea
-                type="email"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                className="contact__input-field description-custom"
-                required
-              />
-            </div>
-            <button className="contact__mail-btn">MAIL</button>
-          </form>
         </div>
       </div>
     </section>
