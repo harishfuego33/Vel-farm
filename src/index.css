@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --ff-size: 1.8rem;
+  --ff-size-130: 10vw;
+  --ff-size-100: 8vw;
+  --ff-size-40: 4rem;
+  --ff-size-30: 3rem;
+  --ff-size-18: 1.8rem;
+  --ff-size-14: 1.4rem;
   --primary-color: #1e4c39;
   --secondary-color: #7e8f7f;
   --territory: #008000;
@@ -23,19 +28,9 @@
   background-color: gray;
 }
 
-*, *::after, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+*,
+*::after,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -68,6 +63,7 @@ body,
   background-color: rgba(97, 97, 97, 0.4);
   backdrop-filter: blur(3px) brightness(110%);
   color: white;
+  min-width: 320px;
 }
 
 .title-box {
@@ -79,7 +75,7 @@ body,
 }
 
 .main-title {
-  font-size: 3rem;
+  font-size: var(--ff-size-30);
   font-weight: 300;
   letter-spacing: 1rem;
 }
@@ -94,7 +90,7 @@ body,
 .nav-bar__option {
   list-style: none;
   padding-block: 1.5rem;
-  font-size: var(--ff-size);
+  font-size: var(--ff-size-18);
   cursor: pointer;
   border-bottom: 2px solid transparent;
 }
@@ -109,6 +105,7 @@ body,
 
 .greet__section {
   min-height: 100vh;
+  min-width: 320px;
   background-image: url(../public/assets/pages/home.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,14 +133,14 @@ body,
   flex-direction: column;
   color: white;
   z-index: 2;
-  width: 67%;
+  width: 100%;
   gap: 0;
 }
 
 .greet__welcome {
   color: white;
   display: inline;
-  font-size: 10rem;
+  font-size: var(--ff-size-100);
   font-weight: 400;
   height: 10rem;
   animation: slide-right 1s;
@@ -151,7 +148,7 @@ body,
 }
 
 .greet__name {
-  font-size: 13rem;
+  font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
   height: 16rem;
@@ -160,8 +157,8 @@ body,
 }
 
 .greet__para {
-  font-size: 1.8rem;
-  width: 90%;
+  font-size: var(--ff-size-18);
+  width: 80%;
   font-weight: 200;
 }
 
@@ -194,13 +191,13 @@ body,
   flex-direction: column;
   justify-content: space-evenly;
   gap: 1rem;
-  padding: 1rem;
+  padding-block: 1rem;
 }
 
 .heading__primary {
   color: var(--primary-color);
   font-family: Helvetica;
-  font-size: 4rem;
+  font-size: var(--ff-size-40);
   text-align: center;
 }
 
@@ -214,6 +211,7 @@ body,
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 4rem;
 }
 
@@ -244,7 +242,6 @@ body,
 
 .ag-practice {
   width: 70%;
-  /* height: 100%; */
   box-shadow: 0 0.5rem 2rem rgba(32, 31, 31, 0.881);
   border-radius: 1rem;
   padding: 2rem;
@@ -261,15 +258,19 @@ body,
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: var(--ff-size-2, 1.8rem);
+  font-size: var(--ff-size-18);
   background-color: var(--primary-color);
   color: white;
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
 }
 
 .ag-para {
-  font-size: 1.4rem;
+  font-size: var(--ff-size-14);
   color: var(--primary-color);
+}
+
+.ag-para:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .supplies_section {
@@ -291,31 +292,11 @@ body,
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 0.1fr repeat(3, 0.9fr) 0.1fr;
-  grid-template-rows: min-content 1fr;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  /* grid-template-columns: 0.1fr repeat(auto-fit, minmax(200px, 1fr)) 0.1fr; */
-  grid-template-areas: "card-0 card-0 .  . .         " ". card-1 card-2 card-3 . ";
-  column-gap: 5rem;
-  row-gap: 2rem;
-}
-
-.card-0 {
-  width: 100%;
-  grid-area: card-0;
-}
-
-.card-1 {
-  grid-area: card-1;
-}
-
-.card-2 {
-  grid-area: card-2;
-}
-
-.card-3 {
-  grid-area: card-3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
 .card {
@@ -327,6 +308,7 @@ body,
   position: relative;
   transition: all 0.3s;
   min-width: 287px;
+  width: 300px;
 }
 
 .card:hover {
@@ -397,27 +379,6 @@ body,
   border-bottom: 1px solid rgb(191, 189, 189);
 }
 
-.cards-2 {
-  display: grid;
-  grid-template-columns: 0.2fr repeat(2, 0.27fr) 0.2fr;
-  grid-template-rows: min-content 1fr;
-  grid-template-areas: " card-A card-A card-A  . " ". card-B card-C .  ";
-  column-gap: 5rem;
-  row-gap: 2rem;
-}
-
-.card-A {
-  grid-area: card-A;
-}
-
-.card-B {
-  grid-area: card-B;
-}
-
-.card-C {
-  grid-area: card-C;
-}
-
 .contact__img-box {
   background-image: url("../public/assets/pages/contact-2.webp");
   background-size: 100%;
@@ -481,12 +442,14 @@ body,
 
 .contact {
   display: flex;
-  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .contact__details {
   display: flex;
   flex-direction: column;
   width: 50%;
+  min-width: 320px;
   padding: 2rem;
 }
 .contact__mail {
@@ -521,7 +484,14 @@ body,
 .contact__map {
   width: 50%;
   border-radius: 4px;
+  min-width: 320px;
   border: none;
+}
+.contact__map-img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
 }
 .contact__mail-btn {
   width: 8rem;
@@ -552,13 +522,6 @@ body,
 }
 .contact__mail-box {
   padding: 0 3rem;
-}
-
-.map-img {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 3px;
 }
 
 .description-custom {
@@ -627,6 +590,54 @@ body,
   }
   100% {
     transform: translateX(calc(var(--size-14) * 6));
+  }
+}
+@media (max-width: 900px) {
+  .nav-bar__options {
+    display: none;
+  }
+  .ag-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: initial;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --ff-size-130: 13vw;
+    --ff-size-100: 11vw;
+    --ff-size-30: 1.6rem;
+    --ff-size-18: 1.6rem;
+    --ff-size-40: 3rem;
+  }
+  .greet__section {
+    padding: 8rem 2rem 2rem 2rem;
+  }
+  .greet__welcome,
+  .greet__name {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+  }
+  .navbar__main {
+    padding-inline: 2rem;
+  }
+  .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .coconut__gallery {
+    width: 100%;
+    height: 30rem;
+  }
+  .ag-container {
+    padding: 1rem;
+  }
+  .ag-practice {
+    width: 100%;
+  }
+  .ag-title {
+    width: 100%;
   }
 }
 

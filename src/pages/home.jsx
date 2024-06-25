@@ -143,12 +143,11 @@ const SuppliesCoconutVarieties = () => {
         Nationwide Supplier of <span className="secondary__color">Mature </span>
         and <span className="secondary__color">Tender</span> Coconuts
       </h1>
+      <div className="ag-title">
+        <h3> Mature coconut varieties</h3>
+      </div>
       <div className="cards">
-        <div className="ag-title card-0">
-          {" "}
-          <h3> Mature coconut varieties</h3>
-        </div>
-        <div className="card card-1">
+        <div className="card">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-1.webp"
@@ -183,7 +182,7 @@ const SuppliesCoconutVarieties = () => {
             </ll>
           </ul>
         </div>
-        <div className="card card-2">
+        <div className="card ">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-2.webp"
@@ -219,7 +218,7 @@ const SuppliesCoconutVarieties = () => {
             </ll>
           </ul>
         </div>
-        <div className="card card-3">
+        <div className="card ">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-3.webp"
@@ -261,12 +260,12 @@ const SuppliesCoconutVarieties = () => {
 const MatureCoconutVarieties = () => {
   return (
     <section className="supplies_section">
-      <div className="cards-2">
-        <div className="ag-title card-A">
-          {" "}
-          <h3> Tender coconut varieties</h3>
-        </div>
-        <div className="card card-B">
+      <div className="ag-title ">
+        {" "}
+        <h3> Tender coconut varieties</h3>
+      </div>
+      <div className="cards">
+        <div className="card ">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-4.webp"
@@ -298,7 +297,7 @@ const MatureCoconutVarieties = () => {
             </ll>
           </ul>
         </div>
-        <div className="card card-C">
+        <div className="card ">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-5.webp"

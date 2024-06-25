@@ -1,27 +1,9 @@
 .cards {
-  display: grid;
-  grid-template-columns: 0.1fr repeat(3, 0.9fr) 0.1fr;
-  grid-template-rows: min-content 1fr;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  /* grid-template-columns: 0.1fr repeat(auto-fit, minmax(200px, 1fr)) 0.1fr; */
-  grid-template-areas:
-    "card-0 card-0 .  . .         "
-    ". card-1 card-2 card-3 . ";
-  column-gap: 5rem;
-  row-gap: 2rem;
-}
-.card-0 {
-  width: 100%;
-  grid-area: card-0;
-}
-.card-1 {
-  grid-area: card-1;
-}
-.card-2 {
-  grid-area: card-2;
-}
-.card-3 {
-  grid-area: card-3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 .card {
   display: flex;
@@ -32,6 +14,7 @@
   position: relative;
   transition: all 0.3s;
   min-width: 287px;
+  width: 300px;
 }
 .card:hover {
   transform: translateY(-1rem);
@@ -91,23 +74,4 @@
 }
 .card__list-items:not(:last-child) {
   border-bottom: 1px solid rgb(191, 189, 189);
-}
-.cards-2 {
-  display: grid;
-  grid-template-columns: 0.2fr repeat(2, 0.27fr) 0.2fr;
-  grid-template-rows: min-content 1fr;
-  grid-template-areas:
-    " card-A card-A card-A  . "
-    ". card-B card-C .  ";
-  column-gap: 5rem;
-  row-gap: 2rem;
-}
-.card-A {
-  grid-area: card-A;
-}
-.card-B {
-  grid-area: card-B;
-}
-.card-C {
-  grid-area: card-C;
 }

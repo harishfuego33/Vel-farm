@@ -1,5 +1,6 @@
 .greet__section {
   min-height: 100vh;
+  min-width: 320px;
   background-image: url(../public/assets/pages/home.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,20 +26,20 @@
   flex-direction: column;
   color: white;
   z-index: 2;
-  width: 67%;
+  width: 100%;
   gap: 0;
 }
 .greet__welcome {
   color: white;
   display: inline;
-  font-size: 10rem;
+  font-size: var(--ff-size-100);
   font-weight: 400;
   height: 10rem;
   animation: slide-right 1s;
   animation-delay: 0.2s;
 }
 .greet__name {
-  font-size: 13rem;
+  font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
   height: 16rem;
@@ -46,8 +47,8 @@
   animation-delay: 0.2s;
 }
 .greet__para {
-  font-size: 1.8rem;
-  width: 90%;
+  font-size: var(--ff-size-18);
+  width: 80%;
   font-weight: 200;
 }
 .greet__btn {
@@ -76,12 +77,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: 1rem;
-  padding: 1rem;
+  padding-block: 1rem;
 }
 .heading__primary {
   color: var(--primary-color);
   font-family: Helvetica;
-  font-size: 4rem;
+  font-size: var(--ff-size-40);
   text-align: center;
 }
 .secondary__color {
@@ -93,6 +94,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  // flex-wrap: wrap;
   gap: 4rem;
 }
 .coconut__gallery {
@@ -118,7 +121,6 @@
 }
 .ag-practice {
   width: 70%;
-  /* height: 100%; */
   box-shadow: 0 0.5rem 2rem rgba(32, 31, 31, 0.881);
   border-radius: 1rem;
   padding: 2rem;
@@ -134,16 +136,18 @@
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: var(--ff-size-2, 1.8rem);
+  font-size: var(--ff-size-18);
   background-color: var(--primary-color);
   color: white;
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
 }
 .ag-para {
-  font-size: 1.4rem;
+  font-size: var(--ff-size-14);
   color: var(--primary-color);
 }
-
+.ag-para:not(:last-child) {
+  margin-bottom: 2rem;
+}
 .supplies_section {
   min-height: 100vh;
   display: flex;

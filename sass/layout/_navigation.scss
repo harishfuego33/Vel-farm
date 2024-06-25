@@ -10,6 +10,7 @@
   background-color: rgba(97, 97, 97, 0.4);
   backdrop-filter: blur(3px) brightness(110%);
   color: white;
+  min-width: 320px;
 }
 .title-box {
   display: flex;
@@ -19,7 +20,7 @@
   animation-delay: 0.3s;
 }
 .main-title {
-  font-size: 3rem;
+  font-size: var(--ff-size-30);
   font-weight: 300;
   letter-spacing: 1rem;
 }
@@ -34,7 +35,7 @@
   &__option {
     list-style: none;
     padding-block: 1.5rem;
-    font-size: var(--ff-size);
+    font-size: var(--ff-size-18);
     cursor: pointer;
     border-bottom: 2px solid transparent;
   }

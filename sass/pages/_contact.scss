@@ -61,12 +61,14 @@
 
 .contact {
   display: flex;
-  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   &__details {
     display: flex;
     flex-direction: column;
     width: 50%;
+    min-width: 320px;
     padding: 2rem;
   }
   &__mail {
@@ -101,7 +103,14 @@
   &__map {
     width: 50%;
     border-radius: 4px;
+    min-width: 320px;
     border: none;
+    &-img {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 3px;
+    }
   }
   &__mail-btn {
     width: 8rem;
@@ -134,12 +143,7 @@
     padding: 0 3rem;
   }
 }
-.map-img {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 3px;
-}
+
 .description-custom {
   resize: none;
   min-height: 8rem;

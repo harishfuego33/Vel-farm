@@ -1,0 +1,52 @@
+@media (max-width: 1223) {
+}
+@media (max-width: 900px) {
+  .nav-bar__options {
+    display: none;
+  }
+  .ag-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: initial;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --ff-size-130: 13vw; //13rem
+    --ff-size-100: 11vw;
+    --ff-size-30: 1.6rem;
+    --ff-size-18: 1.6rem;
+    --ff-size-40: 3rem;
+  }
+  .greet__section {
+    padding: 8rem 2rem 2rem 2rem;
+  }
+  .greet__welcome,
+  .greet__name {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+  }
+  .navbar__main {
+    padding-inline: 2rem;
+  }
+  .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .coconut__gallery {
+    width: 100%;
+    height: 30rem;
+  }
+  .ag-container {
+    padding: 1rem;
+  }
+  .ag-practice {
+    width: 100%;
+  }
+  .ag-title {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+}

@@ -20,13 +20,12 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/contact", {
+      const response = await axios.post("http://localhost:8000/contact", {
         fullName,
         mailId,
         subject,
         description,
       });
-      console.log(response.data);
       if (response.data.success) {
         console.log("Email sent successfully!");
       } else {
@@ -127,7 +126,7 @@ const ContactSection = () => {
         </div>
         <div className="contact__map">
           <iframe
-            className="map-img"
+            className="contact__map-img"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.603234970942!2d77.2492482!3d10.704844699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9cb67cae4dd49%3A0x78ea3a13793335f1!2sVel%20Farms!5e1!3m2!1sen!2sin!4v1719210551960!5m2!1sen!2sin"
           ></iframe>
         </div>
