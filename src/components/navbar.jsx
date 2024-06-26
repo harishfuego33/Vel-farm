@@ -27,19 +27,39 @@ const NavBar = () => {
         <span className="hamburger__btn-line2"></span>
         <span className="hamburger__btn-line3"></span>
       </button>
-      <SlideIn active={active} />
+      <SlideIn active={active} setActive={setActive} />
     </>
   );
 };
-const SlideIn = ({ active }) => {
+const SlideIn = ({ active, setActive }) => {
   return (
     <div className={`slide__navigation ${active ? "slid-in" : ""}`}>
       <ul className="slide__options ">
-        <NavBtn name={"Home"} to={"/"} />
-        <NavBtn name={"Farms"} to={"/farm"} />
-        <NavBtn name={"Product"} to={"/product"} />
-        <NavBtn name={"About us"} to={"/about"} />
-        <NavBtn name={"Contact us"} to={"/contact"} />
+        <NavBtn name={"Home"} to={"/"} active={active} setActive={setActive} />
+        <NavBtn
+          name={"Farms"}
+          to={"/farm"}
+          active={active}
+          setActive={setActive}
+        />
+        <NavBtn
+          name={"Product"}
+          to={"/product"}
+          active={active}
+          setActive={setActive}
+        />
+        <NavBtn
+          name={"About us"}
+          to={"/about"}
+          active={active}
+          setActive={setActive}
+        />
+        <NavBtn
+          name={"Contact us"}
+          to={"/contact"}
+          active={active}
+          setActive={setActive}
+        />
       </ul>
     </div>
   );

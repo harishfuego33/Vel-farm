@@ -10,12 +10,10 @@ const Contact = () => {
 };
 const ContactSection = () => {
   const style = { height: "2.5rem", width: "2.5rem" };
-  const [fullName, setFullName] = useState("harish kumar");
-  const [mailId, setMailId] = useState("harishsugumar33@gmail.com");
-  const [subject, setSubject] = useState("Request for sale product");
-  const [description, setDescription] = useState(
-    "i need of 40 byproduct of the you farms"
-  );
+  const [fullName, setFullName] = useState("");
+  const [mailId, setMailId] = useState("");
+  const [subject, setSubject] = useState("");
+  const [description, setDescription] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {

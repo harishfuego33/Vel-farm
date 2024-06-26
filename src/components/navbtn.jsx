@@ -1,15 +1,15 @@
 import { useResolvedPath, useMatch } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-const NavBtn = ({ name, to }) => {
+const NavBtn = ({ name, to, active, setActive }) => {
   const currPath = useResolvedPath(to);
-  const active = useMatch({ path: currPath.pathname, end: true });
+  const pathactive = useMatch({ path: currPath.pathname, end: true });
   const style = {
     textDecoration: "none",
     color: "white",
   };
   return (
-    <NavLink style={style} to={to}>
-      <li className={`nav-bar__option ${active ? "underlined" : ""}`}>
+    <NavLink style={style} to={to} onClick={() => setActive(!active)}>
+      <li className={`nav-bar__option ${pathactive ? "underlined" : ""}`}>
         {name}
       </li>
     </NavLink>
