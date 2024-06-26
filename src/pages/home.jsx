@@ -1,3 +1,4 @@
+import NavBtn from "../components/navbtn";
 const Home = () => {
   return (
     <main className="home__main">

@@ -8,11 +8,13 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  min-width: 320px;
 }
 body,
 #root {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 #root {
   position: relative;

@@ -39,12 +39,14 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  min-width: 320px;
 }
 
 body,
 #root {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 #root {
@@ -52,8 +54,8 @@ body,
 }
 
 .navbar__main {
-  position: absolute;
-  z-index: 100;
+  position: fixed;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,13 +66,13 @@ body,
   backdrop-filter: blur(3px) brightness(110%);
   color: white;
   min-width: 320px;
+  animation: slide-down 1s;
 }
 
 .title-box {
   display: flex;
   align-items: center;
   gap: 2rem;
-  animation: slide-down 1s;
   animation-delay: 0.3s;
 }
 
@@ -84,7 +86,6 @@ body,
   display: flex;
   align-items: center;
   gap: 4rem;
-  animation: slide-down 1s;
   animation-delay: 0.3s;
 }
 .nav-bar__option {
@@ -101,6 +102,67 @@ body,
 .logo {
   width: 4rem;
   height: 4rem;
+}
+
+.hamburger__btn {
+  display: none;
+  position: fixed;
+  width: 5rem;
+  height: 3.5rem;
+  top: 1.2rem;
+  right: 2rem;
+  background-color: rgba(209, 209, 209, 0.3);
+  border-radius: 3px;
+  padding: 0.5rem;
+  border: none;
+  z-index: 1500;
+  transition: transform 0.3s;
+}
+.hamburger__btn span {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: white;
+  margin-inline: auto;
+}
+.hamburger__btn-line1 {
+  margin-bottom: 10px;
+}
+.hamburger__btn-line3 {
+  margin-top: 10px;
+}
+
+.hamburger__btn.active {
+  transition: transform 1s;
+}
+.hamburger__btn.active .hamburger__btn-line1 {
+  transform: rotate(135deg) translate(9px, -9px);
+}
+.hamburger__btn.active .hamburger__btn-line2 {
+  opacity: 0;
+}
+.hamburger__btn.active .hamburger__btn-line3 {
+  transform: rotate(-135deg) translate(8px, 8px);
+}
+
+.slide__navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.315);
+  backdrop-filter: blur(2px) brightness(80%);
+  z-index: 1000;
+  transform: translate(100%);
+  padding: 5rem 2rem;
+  color: var(-primary-color);
+  transition: transform 0.3s;
+}
+
+.slid-in {
+  transform: translate(0);
 }
 
 .greet__section {
@@ -148,6 +210,7 @@ body,
 }
 
 .greet__name {
+  color: white;
   font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -289,6 +352,7 @@ body,
 .contact__main {
   min-height: 100vh;
   overflow-y: hidden;
+  min-width: 320px;
 }
 
 .cards {
@@ -384,12 +448,12 @@ body,
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 28rem;
-  padding: 10rem 6rem 6rem 6rem;
+  padding: 10rem 4rem 4rem 4rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .contact__img-box::after {
   content: "";
@@ -402,8 +466,14 @@ body,
 
 .contact__title {
   z-index: 10;
+  font-size: 2rem;
   position: relative;
   animation: slide-right 1s;
+}
+
+.contact-h1 {
+  font-size: var(--ff-size-130);
+  color: white;
 }
 
 .location-box {
@@ -443,7 +513,7 @@ body,
 .contact {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 .contact__details {
   display: flex;
@@ -485,6 +555,7 @@ body,
   width: 50%;
   border-radius: 4px;
   min-width: 320px;
+  min-height: 320px;
   border: none;
 }
 .contact__map-img {
@@ -601,6 +672,19 @@ body,
     width: 100%;
     align-items: initial;
   }
+  .contact__img-box {
+    padding: 10rem 2rem 2rem 2rem;
+  }
+  .hamburger__btn {
+    display: initial;
+  }
+  .slide__navigation {
+    display: flex;
+  }
+  .nav-bar__option {
+    color: var(--primary-color);
+    padding-block: 1rem;
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -633,10 +717,21 @@ body,
   .ag-container {
     padding: 1rem;
   }
-  .ag-practice {
+  .ag-practice,
+  .ag-title {
     width: 100%;
   }
-  .ag-title {
+  .contact__img-box {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .contact__map,
+  .contact__details,
+  .contact__input-field {
     width: 100%;
   }
 }

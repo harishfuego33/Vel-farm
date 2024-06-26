@@ -1,38 +1,48 @@
-import { NavLink } from "react-router-dom";
-import { useResolvedPath, useMatch } from "react-router-dom";
+import { useState } from "react";
+import NavBtn from "./navbtn";
 const NavBar = () => {
+  const [active, setActive] = useState(false);
   return (
-    <nav className="navbar__main">
-      <div className="title-box">
-        <div className="log-box">
-          <img src="/assets/logo.png" alt="farms-log" className="logo" />
+    <>
+      <nav className="navbar__main">
+        <div className="title-box">
+          <div className="log-box">
+            <img src="/assets/logo.png" alt="farms-log" className="logo" />
+          </div>
+          <h2 className="main-title">VEL FARMS</h2>
         </div>
-        <h2 className="main-title">VEL FARMS</h2>
-      </div>
-      <ul className="nav-bar__options ">
+        <ul className="nav-bar__options ">
+          <NavBtn name={"Home"} to={"/"} />
+          <NavBtn name={"Farms"} to={"/farm"} />
+          <NavBtn name={"Product"} to={"/product"} />
+          <NavBtn name={"About us"} to={"/about"} />
+          <NavBtn name={"Contact us"} to={"/contact"} />
+        </ul>
+      </nav>
+      <button
+        className={`hamburger__btn ${active ? "active" : ""}`}
+        onClick={() => setActive(!active)}
+      >
+        <span className="hamburger__btn-line1"></span>
+        <span className="hamburger__btn-line2"></span>
+        <span className="hamburger__btn-line3"></span>
+      </button>
+      <SlideIn active={active} />
+    </>
+  );
+};
+const SlideIn = ({ active }) => {
+  return (
+    <div className={`slide__navigation ${active ? "slid-in" : ""}`}>
+      <ul className="slide__options ">
         <NavBtn name={"Home"} to={"/"} />
         <NavBtn name={"Farms"} to={"/farm"} />
         <NavBtn name={"Product"} to={"/product"} />
         <NavBtn name={"About us"} to={"/about"} />
         <NavBtn name={"Contact us"} to={"/contact"} />
       </ul>
-    </nav>
+    </div>
   );
 };
 
-const NavBtn = ({ name, to }) => {
-  const currPath = useResolvedPath(to);
-  const active = useMatch({ path: currPath.pathname, end: true });
-  const style = {
-    textDecoration: "none",
-    color: "white",
-  };
-  return (
-    <NavLink style={style} to={to}>
-      <li className={`nav-bar__option ${active ? "underlined" : ""}`}>
-        {name}
-      </li>
-    </NavLink>
-  );
-};
 export default NavBar;

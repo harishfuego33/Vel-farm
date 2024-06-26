@@ -9,6 +9,19 @@
     width: 100%;
     align-items: initial;
   }
+  .contact__img-box {
+    padding: 10rem 2rem 2rem 2rem;
+  }
+  .hamburger__btn {
+    display: initial;
+  }
+  .slide__navigation {
+    display: flex;
+  }
+  .nav-bar__option {
+    color: var(--primary-color);
+    padding-block: 1rem;
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -41,10 +54,21 @@
   .ag-container {
     padding: 1rem;
   }
-  .ag-practice {
+  .ag-practice,
+  .ag-title {
     width: 100%;
   }
-  .ag-title {
+  .contact__img-box {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .contact__map,
+  .contact__details,
+  .contact__input-field {
     width: 100%;
   }
 }

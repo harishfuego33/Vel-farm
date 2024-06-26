@@ -3,12 +3,12 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 28rem;
-  padding: 10rem 6rem 6rem 6rem;
+  padding: 10rem 4rem 4rem 4rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   &::after {
     content: "";
     position: absolute;
@@ -20,8 +20,13 @@
 }
 .contact__title {
   z-index: 10;
+  font-size: 2rem;
   position: relative;
   animation: slide-right 1s;
+}
+.contact-h1 {
+  font-size: var(--ff-size-130);
+  color: white;
 }
 .location {
   &-box {
@@ -58,12 +63,10 @@
     }
   }
 }
-
 .contact {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-
+  flex-wrap: wrap-reverse;
   &__details {
     display: flex;
     flex-direction: column;
@@ -104,6 +107,7 @@
     width: 50%;
     border-radius: 4px;
     min-width: 320px;
+    min-height: 320px;
     border: none;
     &-img {
       width: 100%;

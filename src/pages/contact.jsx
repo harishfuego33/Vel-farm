@@ -16,6 +16,7 @@ const ContactSection = () => {
   const [description, setDescription] = useState(
     "i need of 40 byproduct of the you farms"
   );
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,13 +27,12 @@ const ContactSection = () => {
         subject,
         description,
       });
-      if (response.data.success) {
+      if (response.data) {
         console.log("Email sent successfully!");
       } else {
         console.log("Failed to send email!");
       }
     } catch (error) {
-      console.log("Failed to send email!");
       console.error("Error sending email:", error);
     }
   };
@@ -40,7 +40,7 @@ const ContactSection = () => {
     <section className="contact__section">
       <div className="contact__img-box">
         <div className="contact__title">
-          <h1 className="greet__welcome">CONTACT US</h1>
+          <h1 className="contact-h1">CONTACT US</h1>
         </div>
         <a
           href="https://www.google.com/maps/place/Vel+Farms/@10.7048482,77.2475136,780m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba9cb67cae4dd49:0x78ea3a13793335f1!8m2!3d10.7048447!4d77.2492482!16s%2Fg%2F11ks2s3vh_?entry=ttu"
