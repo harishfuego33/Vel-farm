@@ -54,7 +54,7 @@ body,
 }
 
 .navbar__main {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   display: flex;
   justify-content: space-between;
@@ -220,6 +220,7 @@ body,
 }
 
 .greet__para {
+  color: white;
   font-size: var(--ff-size-18);
   width: 80%;
   font-weight: 200;
@@ -345,11 +346,18 @@ body,
 }
 
 .home__main {
-  width: 100%;
   min-height: 100vh;
+  overflow-y: hidden;
+  min-width: 320px;
 }
 
 .contact__main {
+  min-height: 100vh;
+  overflow-y: hidden;
+  min-width: 320px;
+}
+
+.farm__main {
   min-height: 100vh;
   overflow-y: hidden;
   min-width: 320px;
@@ -600,6 +608,63 @@ body,
   min-height: 8rem;
   max-height: 8rem;
   padding-block: 1rem;
+}
+
+.farm__section {
+  background-image: url("../public/assets/pages/farm.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 6rem 4rem 4rem 4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.farm__section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.183);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+.farm__gallery {
+  height: 100vh;
+}
+.farm__gallery-cards {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.farm__gallery-card {
+  position: relative;
+  height: 50rem;
+  width: 14.2857142857%;
+  border-radius: 3px;
+  transition: all 0.4s;
+}
+.farm__gallery-card:hover {
+  width: 50%;
+}
+.farm__gallery-card::before {
+  content: attr(data-line);
+  position: absolute;
+  color: var(--primary-color);
+  font-size: 3rem;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.farm__gallery-card:hover::before {
+  transform: translateY(-4rem);
+  opacity: 1;
 }
 
 @keyframes pop-up {

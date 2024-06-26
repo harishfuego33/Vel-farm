@@ -1,0 +1,55 @@
+.farm__section {
+  background-image: url("../public/assets/pages/farm.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 6rem 4rem 4rem 4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.183);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+  }
+}
+.farm__gallery {
+  height: 100vh;
+  &-cards {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  &-card {
+    position: relative;
+    height: 50rem;
+    width: calc(100% / 7);
+    border-radius: 3px;
+    transition: all 0.4s;
+    &:hover {
+      width: calc(100% / 2);
+    }
+    &::before {
+      content: attr(data-line);
+      position: absolute;
+      color: var(--primary-color);
+      font-size: 3rem;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+    &:hover::before {
+      transform: translateY(-4rem);
+      opacity: 1;
+    }
+  }
+}

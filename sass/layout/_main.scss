@@ -1,9 +1,16 @@
 .home__main {
-  width: 100%;
   min-height: 100vh;
+  overflow-y: hidden;
+  min-width: 320px;
 }
 
 .contact__main {
+  min-height: 100vh;
+  overflow-y: hidden;
+  min-width: 320px;
+}
+
+.farm__main {
   min-height: 100vh;
   overflow-y: hidden;
   min-width: 320px;
