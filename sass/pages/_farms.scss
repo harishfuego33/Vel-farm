@@ -23,15 +23,15 @@
   &-cards {
     display: flex;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem 1rem;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     height: 100vh;
-    overflow-x: hidden;
   }
   &-card {
     position: relative;
-    height: 50rem;
+    height: 90%;
     width: calc(100% / 7);
     border-radius: 3px;
     transition: all 0.4s;
@@ -58,28 +58,19 @@
       left: 0;
       transform: translateY(0rem);
     }
-    &:hover::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 50%;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.58);
-      z-index: 1;
-      transition: all 0.4s;
-    }
   }
   &-para {
     cursor: default;
     position: absolute;
     font-size: 1.8rem;
     opacity: 0;
-    bottom: 5%;
+    bottom: 0;
     color: white;
+    height: 40%;
     z-index: 4;
     padding: 2rem;
-    transition: opacity cubic-bezier(0.98, 0.37, 0.31, 1.23);
+    transition: opacity 0.2s;
+    background-color: rgba(0, 0, 0, 0.58);
   }
   &-card:hover > &-para {
     opacity: 1;

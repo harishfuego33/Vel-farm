@@ -81,7 +81,10 @@
     padding-top: 5rem;
   }
   .farm__gallery-card {
-    min-width: 320px;
+    width: 15rem;
+    &:hover {
+      width: 32rem;
+    }
   }
 }
 @media (max-width: 320px) {

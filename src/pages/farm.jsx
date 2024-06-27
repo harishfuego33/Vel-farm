@@ -35,12 +35,12 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para ">
+          <div className="farm__gallery-para ">
             Vel Farms' headquarters in Pollachi is renowned for its lush
             greenery and thriving coconut plantations. This central hub
             showcases advanced farming techniques and sustainable practices. It
             serves as the main operational and distribution center.
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="UDUMALPET">
@@ -49,12 +49,12 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <div className="farm__gallery-para">
             In Udumalpet, Vel Farms benefits from a favorable climate ideal for
             coconut cultivation. The farm combines traditional methods with
             modern innovations. This ensures the production of high-quality
             coconuts.
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="PALANI">
@@ -63,12 +63,12 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <div className="farm__gallery-para">
             Vel Farms' Palani location is dedicated to organic farming
             practices. Nestled in the Western Ghats, this farm produces
             organically certified coconuts. It ensures chemical-free and
             eco-friendly cultivation methods.
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="ANAMALAI">
@@ -77,12 +77,12 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <div className="farm__gallery-para">
             In Anamalai, Vel Farms operates amidst a biodiverse landscape,
             perfect for sustainable coconut farming. The farm integrates
             agroforestry practices to promote biodiversity. This ensures
             long-term ecological balance.
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="COIMBATORE">
@@ -91,12 +91,12 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <div className="farm__gallery-para">
             The Coimbatore farm leverages the city's industrial infrastructure
             and agricultural expertise. This location integrates technology with
             traditional farming practices. The goal is to enhance productivity
             and quality.
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="SATHYAMANGALAM">
@@ -105,11 +105,11 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <div className="farm__gallery-para">
             The Sathy farm is set in a picturesque area with rich soil and ample
             water resources. It focuses on maximizing yield while maintaining
             environmental sustainability. Soil health is a top priority here.
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="KANGEYAM">
@@ -118,12 +118,12 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <div className="farm__gallery-para">
             Located in Kangeyam, Vel Farms utilizes well-drained soil and a
             consistent climate for robust coconut crops. The farm is known for
             high-yield varieties and efficient water management. Practices are a
             key focus here
-          </p>
+          </div>
           <span className="farm__gallery-overlay"></span>
         </div>
       </div>
