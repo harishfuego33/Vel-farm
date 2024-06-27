@@ -12,7 +12,7 @@ const FarmSection = () => {
     <section className="farm__section">
       <div className="contact__title">
         <h1 className="contact-h1">OUR FARMS</h1>
-        <p className="farm__gallery-para">
+        <p className="greet__para">
           At Vel Farms, our coconuts thrive in fertile environments across
           Pollachi, Udumalpet, Palani, Sathyamangalam, Coimbatore, Kangeyam, and
           Anamalai. We prioritize sustainable farming with eco-friendly methods.
@@ -35,12 +35,13 @@ const FarmGallery = () => {
             alt="farms-log"
             className="gallery-img"
           />
-          <p className="farm__gallery-para">
+          <p className="farm__gallery-para ">
             Vel Farms' headquarters in Pollachi is renowned for its lush
             greenery and thriving coconut plantations. This central hub
             showcases advanced farming techniques and sustainable practices. It
             serves as the main operational and distribution center.
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="UDUMALPET">
           <img
@@ -54,6 +55,7 @@ const FarmGallery = () => {
             modern innovations. This ensures the production of high-quality
             coconuts.
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="PALANI">
           <img
@@ -67,6 +69,7 @@ const FarmGallery = () => {
             organically certified coconuts. It ensures chemical-free and
             eco-friendly cultivation methods.
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="ANAMALAI">
           <img
@@ -80,6 +83,7 @@ const FarmGallery = () => {
             agroforestry practices to promote biodiversity. This ensures
             long-term ecological balance.
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="COIMBATORE">
           <img
@@ -93,6 +97,7 @@ const FarmGallery = () => {
             traditional farming practices. The goal is to enhance productivity
             and quality.
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="SATHYAMANGALAM">
           <img
@@ -105,6 +110,7 @@ const FarmGallery = () => {
             water resources. It focuses on maximizing yield while maintaining
             environmental sustainability. Soil health is a top priority here.
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
         <div className="farm__gallery-card" data-line="KANGEYAM">
           <img
@@ -118,6 +124,7 @@ const FarmGallery = () => {
             high-yield varieties and efficient water management. Practices are a
             key focus here
           </p>
+          <span className="farm__gallery-overlay"></span>
         </div>
       </div>
     </section>
