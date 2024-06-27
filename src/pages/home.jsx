@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 const Home = () => {
   return (
     <main className="home__main">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 const Contact = () => {
   return (
     <main className="contact__main">
