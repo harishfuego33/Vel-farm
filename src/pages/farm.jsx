@@ -1,8 +1,11 @@
+import Footer from "../components/Footer";
+
 const Farms = () => {
   return (
     <main className="farm__main">
       <FarmSection />
       <FarmGallery />
+      <Footer />
     </main>
   );
 };

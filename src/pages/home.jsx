@@ -1,4 +1,4 @@
-import NavBtn from "../components/navbtn";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <main className="home__main">
@@ -6,6 +6,7 @@ const Home = () => {
       <AgricultureSustainability />
       <SuppliesCoconutVarieties />
       <MatureCoconutVarieties />
+      <Footer />
     </main>
   );
 };

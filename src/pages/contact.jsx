@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
+import Footer from "../components/Footer";
 const Contact = () => {
   return (
     <main className="contact__main">
       <ContactSection />;
+      <Footer />
     </main>
   );
 };

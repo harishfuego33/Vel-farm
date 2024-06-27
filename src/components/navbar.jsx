@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavBtn from "./navbtn";
+import NavBtn from "./Navbtn";
 const NavBar = () => {
   const [active, setActive] = useState(false);
   return (

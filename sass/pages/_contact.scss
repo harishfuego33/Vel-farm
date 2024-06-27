@@ -137,6 +137,8 @@
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--primary-color);
+    position: relative;
+    z-index: 2;
   }
   &__address {
     font-size: 1.6rem;

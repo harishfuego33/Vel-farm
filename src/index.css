@@ -16,18 +16,6 @@
   font-family: Helvetica;
   src: url(../public/HelveticaNaue/HelveticaNeueBlack.otf);
 }
-.underlined {
-  border-bottom: 2px solid white !important;
-}
-
-.hr {
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin-block: 0.5rem;
-  background-color: gray;
-}
-
 *,
 *::after,
 *::after {
@@ -64,16 +52,18 @@ body,
   padding-inline: 3rem;
   background-color: rgba(97, 97, 97, 0.4);
   backdrop-filter: blur(3px) brightness(110%);
-  color: white;
   min-width: 320px;
   animation: slide-down 1s;
 }
 
 .title-box {
+  color: white;
   display: flex;
   align-items: center;
   gap: 2rem;
   animation-delay: 0.3s;
+  position: relative;
+  z-index: 3;
 }
 
 .main-title {
@@ -593,6 +583,8 @@ body,
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--primary-color);
+  position: relative;
+  z-index: 2;
 }
 .contact__address {
   font-size: 1.6rem;
@@ -697,6 +689,93 @@ body,
 }
 .farm__gallery-card:hover > .farm__gallery-overlay {
   opacity: 0;
+}
+
+.footer__section {
+  height: 25rem;
+  background-image: url("../public/assets/pages/footer.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer__section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+.foot__box-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.footer__list {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  gap: 2rem;
+  border-top: 2px solid white;
+}
+
+.footer__unordered-list {
+  list-style: none;
+  color: white;
+  height: 2rem;
+  position: relative;
+  font-size: 1.4rem;
+}
+.footer__unordered-list::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  background-color: white;
+  width: 0;
+  transition: all 0.3s;
+}
+.footer__unordered-list:hover::after {
+  width: 100%;
+}
+
+.copy_right {
+  border-top: 2px solid white;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.underlined {
+  border-bottom: 2px solid white !important;
+}
+
+.hr {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-block: 0.5rem;
+  background-color: gray;
+}
+
+.new-quots {
+  font-size: var(--ff-size-18);
+  font-weight: 300;
+  color: white !important;
+  text-align: center;
 }
 
 @keyframes pop-up {

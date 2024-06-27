@@ -9,15 +9,17 @@
   padding-inline: 3rem;
   background-color: rgba(97, 97, 97, 0.4);
   backdrop-filter: blur(3px) brightness(110%);
-  color: white;
   min-width: 320px;
   animation: slide-down 1s;
 }
 .title-box {
+  color: white;
   display: flex;
   align-items: center;
   gap: 2rem;
   animation-delay: 0.3s;
+  position: relative;
+  z-index: 3;
 }
 .main-title {
   font-size: var(--ff-size-30);
