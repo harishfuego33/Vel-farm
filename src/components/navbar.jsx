@@ -31,6 +31,7 @@ const NavBar = () => {
     </>
   );
 };
+// eslint-disable-next-line react/prop-types
 const SlideIn = ({ active, setActive }) => {
   return (
     <div className={`slide__navigation ${active ? "slid-in" : ""}`}>
