@@ -98,7 +98,7 @@
   z-index: 1000;
   transform: translate(100%);
   padding: 5rem 2rem;
-  color: var(-primary-color);
+  color: var(--primary-color);
   transition: transform 0.3s;
 }
 .slid-in {

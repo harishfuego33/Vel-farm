@@ -71,6 +71,18 @@
   .contact__input-field {
     width: 100%;
   }
+  .farm__section {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+  .farm__gallery-cards {
+    height: auto;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 5rem;
+  }
+  .farm__gallery-card {
+    min-width: 320px;
+  }
 }
 @media (max-width: 320px) {
 }
