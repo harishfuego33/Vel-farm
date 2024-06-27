@@ -676,8 +676,9 @@ body,
   font-size: 1.8rem;
   opacity: 0;
   bottom: 0;
+  left: 0;
+  height: 55%;
   color: white;
-  height: 40%;
   z-index: 4;
   padding: 2rem;
   transition: opacity 0.2s;
@@ -841,6 +842,7 @@ body,
   }
   .farm__gallery-card {
     width: 15rem;
+    height: 50rem;
   }
   .farm__gallery-card:hover {
     width: 32rem;
