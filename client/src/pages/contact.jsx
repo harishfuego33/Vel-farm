@@ -23,7 +23,7 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.LINK}/contact`, {
+      const response = await axios.post("http://localhost:4000/contact", {
         fullName,
         mailId,
         subject,
