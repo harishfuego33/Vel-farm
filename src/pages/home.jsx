@@ -1,4 +1,4 @@
-import Navfooter from "../components/footer";
+import Navfooter from "../components/navfooter";
 const Home = () => {
   return (
     <main className="home__main">

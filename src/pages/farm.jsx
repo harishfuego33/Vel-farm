@@ -1,4 +1,4 @@
-import Navfooter from "../components/footer";
+import Navfooter from "../components/navfooter";
 const Farms = () => {
   return (
     <main className="farm__main">

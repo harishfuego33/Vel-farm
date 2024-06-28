@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
-import Navfooter from "../components/footer";
+import Navfooter from "../components/navfooter";
 const Contact = () => {
   return (
     <main className="contact__main">
