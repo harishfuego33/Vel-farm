@@ -29,7 +29,7 @@ app.post("/contact", (req, res) => {
     subject: subject, // Subject line
     text: description, // plain text body
     name: fullName,
-    html: `<p>${description}</p>`, // html body
+    html: `<p>${(fullName, description)}</p>`, // html body
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {

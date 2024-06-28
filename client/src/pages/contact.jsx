@@ -20,7 +20,6 @@ const ContactSection = () => {
   const [description, setDescription] = useState("");
   const { NotificationComponent, triggerNotification } =
     UseNotification("top-right");
-  console.log(import.meta.env.VITE_API_LINK);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
