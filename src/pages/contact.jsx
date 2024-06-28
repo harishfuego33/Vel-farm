@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
-import Footer from "../components/footer";
+import Navfooter from "../components/footer";
 const Contact = () => {
   return (
     <main className="contact__main">
       <ContactSection />;
-      <Footer />
+      <Navfooter />
     </main>
   );
 };
@@ -16,7 +16,7 @@ const ContactSection = () => {
   const [mailId, setMailId] = useState("");
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();

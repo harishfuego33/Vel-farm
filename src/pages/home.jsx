@@ -1,4 +1,4 @@
-import Footer from "../components/footer";
+import Navfooter from "../components/footer";
 const Home = () => {
   return (
     <main className="home__main">
@@ -6,7 +6,7 @@ const Home = () => {
       <AgricultureSustainability />
       <SuppliesCoconutVarieties />
       <MatureCoconutVarieties />
-      <Footer />
+      <Navfooter />
     </main>
   );
 };

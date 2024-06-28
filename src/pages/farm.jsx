@@ -1,11 +1,10 @@
-import Footer from "../components/footer";
-
+import Navfooter from "../components/footer";
 const Farms = () => {
   return (
     <main className="farm__main">
       <FarmSection />
       <FarmGallery />
-      <Footer />
+      <Navfooter />
     </main>
   );
 };
@@ -39,7 +38,7 @@ const FarmGallery = () => {
             className="gallery-img"
           />
           <div className="farm__gallery-para ">
-            Vel Farms' headquarters in Pollachi is renowned for its lush
+            Vel Farms &apos; headquarters in Pollachi is renowned for its lush
             greenery and thriving coconut plantations. This central hub
             showcases advanced farming techniques and sustainable practices. It
             serves as the main operational and distribution center.
@@ -67,7 +66,7 @@ const FarmGallery = () => {
             className="gallery-img"
           />
           <div className="farm__gallery-para">
-            Vel Farms' Palani location is dedicated to organic farming
+            Vel Farms &apos; Palani location is dedicated to organic farming
             practices. Nestled in the Western Ghats, this farm produces
             organically certified coconuts. It ensures chemical-free and
             eco-friendly cultivation methods.
@@ -95,10 +94,10 @@ const FarmGallery = () => {
             className="gallery-img"
           />
           <div className="farm__gallery-para">
-            The Coimbatore farm leverages the city's industrial infrastructure
-            and agricultural expertise. This location integrates technology with
-            traditional farming practices. The goal is to enhance productivity
-            and quality.
+            The Coimbatore farm leverages the city &apos; s industrial
+            infrastructure and agricultural expertise. This location integrates
+            technology with traditional farming practices. The goal is to
+            enhance productivity and quality.
           </div>
           <span className="farm__gallery-overlay"></span>
         </div>

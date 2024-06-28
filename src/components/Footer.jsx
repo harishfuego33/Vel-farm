@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-const Footer = () => {
+const Navfooter = () => {
   const style = {
     textDecoration: "none",
     color: "white",
@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
         <h2 className="main-title">VEL FARMS</h2>
       </div>
-      <p className="contact__quotes new-quots">
+      <p className="contact__quotes new-quote">
         &quot; Together, we grow strong like a coconut tree, thriving with unity
         and purpose. &quot;
       </p>
@@ -46,4 +46,4 @@ const Footer = () => {
     </footer>
   );
 };
-export default Footer;
+export default Navfooter;
