@@ -17,7 +17,6 @@ const Navfooter = () => {
         and purpose. &quot;
       </p>
       <div className="foot__box-1">
-        <span className="hr-white"></span>
         <ul className="footer__list">
           <NavLink style={style} to={"/"}>
             <li className="footer__unordered-list">HOME</li>
@@ -36,7 +35,6 @@ const Navfooter = () => {
           </NavLink>
         </ul>
         <div className="foot__box-2">
-          <span className="hr-white"></span>
           <p className="copy_right">
             &copy; Copyright 2024 by MOUNTAINS CREATION. All Rights Reserved. is
             Powered by VEL FARMS.

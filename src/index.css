@@ -771,9 +771,9 @@ body,
   background-color: gray;
 }
 
-.new-quots {
+.new-quote {
   font-size: var(--ff-size-18);
-  font-weight: 300;
+  font-weight: 100;
   color: white !important;
   text-align: center;
 }
