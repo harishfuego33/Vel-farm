@@ -3,7 +3,6 @@ import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
 import Navfooter from "../components/navfooter";
 import UseNotification from "../hooks/usenotification";
-import.meta.env.VITE_API_LINK;
 
 const Contact = () => {
   return (
@@ -24,15 +23,12 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_LINK}/contact`,
-        {
-          fullName,
-          mailId,
-          subject,
-          description,
-        }
-      );
+      const response = await axios.post(`${import.meta.env.LINK}/contact`, {
+        fullName,
+        mailId,
+        subject,
+        description,
+      });
       if (response.data) {
         triggerNotification({
           type: "success",
