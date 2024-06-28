@@ -36,8 +36,8 @@ const Navfooter = () => {
         </ul>
         <div className="foot__box-2">
           <p className="copy_right">
-            &copy; Copyright 2024 by MOUNTAINS CREATION. All Rights Reserved. is
-            Powered by VEL FARMS.
+            &copy; Copyright 2024 by <strong>MOUNTAINS CREATION</strong>. All
+            Rights Reserved. is Powered by VEL FARMS.
           </p>
         </div>
       </div>

@@ -2,54 +2,42 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const Mailjet = require("node-mailjet");
+const nodemailer = require("nodemailer");
 
 dotenv.config();
 
-const mailjet = Mailjet.apiConnect(
-  process.env.MAILJET_API_KEY,
-  process.env.MAILJET_API_SECRET
-);
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
 app.post("/contact", (req, res) => {
   const { fullName, mailId, subject, description } = req.body;
-  console.log(fullName, mailId, subject, description);
-
-  const request = mailjet.post("send", { version: "v3.1" }).request({
-    Messages: [
-      {
-        From: {
-          Email: mailId,
-          Name: fullName,
-        },
-        To: [
-          {
-            Email: "harishkumar.ct20@bitsathy.ac.in",
-            Name: "HARISH",
-          },
-        ],
-        Subject: subject,
-        TextPart: "My first Mailjet email",
-        HTMLPart:
-          "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
-        CustomID: "000001",
-      },
-    ],
+  console.log(fullName, mailId);
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.EMAIL, // Your email address
+      pass: process.env.PASSWORD, // Your email password
+    },
   });
-  request
-    .then((result) => {
-      console.log(result.body);
-      res.status(200).json({ message: "Email sent successfully" });
-    })
-    .catch((err) => {
-      console.error(err.statusCode, err.message);
-      res.status(500).json({ error: "Error sending email" });
-    });
-});
 
+  let mailOptions = {
+    from: `"${fullName}" <${mailId}>`, // sender address
+    to: "harishkumar.ct20@bitsathy.ac.in", // list of receivers
+    subject: subject, // Subject line
+    text: description, // plain text body
+    html: `<p>${description}</p>`, // html body
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Message sent: %s", info.messageId);
+    res.send("Email has been sent");
+  });
+});
 const port = 8000;
 console.log(port);
 app.listen(port, () => {

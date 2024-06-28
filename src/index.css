@@ -759,6 +759,87 @@ body,
   text-align: center;
 }
 
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  padding: 2rem;
+  color: white;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+
+.success {
+  background-color: rgb(41, 194, 97);
+}
+
+.failed {
+  background-color: rgb(194, 43, 41);
+}
+
+.error {
+  background-color: rgb(255, 103, 100);
+}
+
+.top-right {
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
+  z-index: 100;
+}
+
+.top-left {
+  position: fixed;
+  left: 3rem;
+  top: 2rem;
+  width: 28rem;
+  z-index: 100;
+}
+
+.bottom-right {
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  width: 28rem;
+  z-index: 100;
+}
+
+.bottom-left {
+  position: fixed;
+  left: 3rem;
+  bottom: 2rem;
+  width: 28rem;
+  z-index: 100;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+}
+
+.pop-up {
+  animation: popup 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .underlined {
   border-bottom: 2px solid white !important;
 }

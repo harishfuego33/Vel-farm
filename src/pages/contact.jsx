@@ -2,6 +2,8 @@ import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
 import Navfooter from "../components/navfooter";
+import UseNotification from "../hooks/usenotification";
+
 const Contact = () => {
   return (
     <main className="contact__main">
@@ -16,7 +18,8 @@ const ContactSection = () => {
   const [mailId, setMailId] = useState("");
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
-  // const [message, setMessage] = useState("");
+  const { NotificationComponent, triggerNotification } =
+    UseNotification("top-right");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,16 +31,33 @@ const ContactSection = () => {
         description,
       });
       if (response.data) {
-        console.log("Email sent successfully!");
+        triggerNotification({
+          type: "success",
+          message: "Email sent successfully",
+          duration: 3000,
+          animation: "fade-in",
+        });
       } else {
-        console.log("Failed to send email!");
+        triggerNotification({
+          type: "failed",
+          message: "Email sent failed",
+          duration: 3000,
+        });
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.log("Failed to send email!");
+      triggerNotification({
+        type: "error",
+        message: "node mailer failed to start",
+        duration: 13000,
+        animation: "fade-in",
+      });
     }
   };
+
   return (
     <section className="contact__section">
+      {NotificationComponent}
       <div className="contact__img-box">
         <div className="contact__title">
           <h1 className="contact-h1">CONTACT US</h1>
