@@ -1,19 +1,22 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const nodemailer = require("nodemailer");
+const createTransport = require("nodemailer");
+const json = require("body-parser").json;
 
 dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
+const PORT = 4000;
+
 app.get("/", (req, res) => res.send("server is running"));
+
 app.post("/contact", (req, res) => {
   const { fullName, mailId, subject, description } = req.body;
   console.log(fullName, mailId);
-  const transporter = nodemailer.createTransport({
+  const transporter = createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
@@ -30,18 +33,19 @@ app.post("/contact", (req, res) => {
     text: description, // plain text body
     html: `<p>${description}</p>`, // html body
   };
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return console.log(error);
+      console.log(error);
+      return res.status(500).send("Error sending email");
     }
     console.log("Message sent: %s", info.messageId);
     res.send("Email has been sent");
   });
 });
-const port = 8000;
-console.log(port);
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
 
 module.exports = app;
