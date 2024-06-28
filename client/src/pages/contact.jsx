@@ -20,15 +20,19 @@ const ContactSection = () => {
   const [description, setDescription] = useState("");
   const { NotificationComponent, triggerNotification } =
     UseNotification("top-right");
+  console.log(import.meta.env.VITE_API_LINK);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/contact", {
-        fullName,
-        mailId,
-        subject,
-        description,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_LINK}/contact`,
+        {
+          fullName,
+          mailId,
+          subject,
+          description,
+        }
+      );
       if (response.data) {
         triggerNotification({
           type: "success",

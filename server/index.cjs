@@ -24,10 +24,11 @@ app.post("/contact", (req, res) => {
   });
 
   let mailOptions = {
-    from: `${fullName} ${mailId}`, // sender address
+    from: mailId, // sender address
     to: "harishkumar.ct20@bitsathy.ac.in", // list of receivers
     subject: subject, // Subject line
     text: description, // plain text body
+    name: fullName,
     html: `<p>${description}</p>`, // html body
   };
   transporter.sendMail(mailOptions, (error, info) => {
