@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
+app.get("/", (req, res) => res.send("server is running"));
 app.post("/contact", (req, res) => {
   const { fullName, mailId, subject, description } = req.body;
   console.log(fullName, mailId);
