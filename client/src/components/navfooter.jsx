@@ -28,10 +28,10 @@ const Navfooter = () => {
             <li className="footer__unordered-list">PRODUCT</li>
           </NavLink>
           <NavLink style={style} to={"/about"}>
-            <li className="footer__unordered-list">ABOUT US</li>
+            <li className="footer__unordered-list">ABOUT</li>
           </NavLink>
           <NavLink style={style} to={"/contact"}>
-            <li className="footer__unordered-list">CONTACT US</li>
+            <li className="footer__unordered-list">CONTACT</li>
           </NavLink>
         </ul>
         <div className="foot__box-2">

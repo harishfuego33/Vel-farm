@@ -184,7 +184,7 @@ const SuppliesCoconutVarieties = () => {
             </ll>
           </ul>
         </div>
-        <div className="card ">
+        <div className="card">
           <div className="card__img-box">
             <img
               src="/assets/cards/card-2.webp"

@@ -25,5 +25,5 @@ server.cjs
 *.sw?
 .env
 
-.
+vercel.json
 

@@ -22,6 +22,29 @@
     color: var(--primary-color);
     padding-block: 1rem;
   }
+  .founder__container {
+    flex-direction: column;
+    gap: 0;
+    &-img {
+      height: 75vh;
+      width: 100%;
+      background-position: center;
+    }
+    &-info {
+      width: 100%;
+    }
+    &-info-box {
+      padding: 1rem;
+    }
+  }
+  .goal__cards {
+    flex-direction: column;
+    flex-wrap: initial;
+    align-items: center;
+  }
+  .goal__card {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -87,6 +110,31 @@
       width: 32rem;
     }
   }
-}
-@media (max-width: 320px) {
+  .about__section {
+    padding: 8rem 0rem 0rem 0rem;
+  }
+  .founder__container-name {
+    font-size: 3.8rem;
+  }
+  .founder__container-info {
+    padding: 2rem;
+  }
+  .export__section-para-box {
+    width: 100%;
+  }
+  .colab__section {
+    flex-direction: column;
+    align-items: center;
+    &-img {
+      min-width: 320px;
+      height: 60vh;
+      background-image: url(/public/assets/about/handshake.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &-container {
+      padding-inline: 2rem;
+    }
+  }
 }

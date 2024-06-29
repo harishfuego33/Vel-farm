@@ -8,7 +8,7 @@
   --ff-size-14: 1.4rem;
   --primary-color: #1e4c39;
   --secondary-color: #7e8f7f;
-  --territory: #008000;
+  --territory-color: #008000;
   --size-14: -14.3%;
 }
 
@@ -335,18 +335,8 @@ body,
   padding-block: 1rem;
 }
 
-.home__main {
-  min-height: 100vh;
-  overflow-y: hidden;
-  min-width: 320px;
-}
-
-.contact__main {
-  min-height: 100vh;
-  overflow-y: hidden;
-  min-width: 320px;
-}
-
+.home__main,
+.contact__main,
 .farm__main {
   min-height: 100vh;
   overflow-y: hidden;
@@ -428,7 +418,7 @@ body,
 }
 
 .rupees {
-  color: var(--territory);
+  color: var(--territory-color);
   font-weight: 600;
 }
 
@@ -840,6 +830,150 @@ body,
     transform: scale(1);
   }
 }
+.about__section {
+  background-image: url("../public/assets/pages/about.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 8rem 5rem 5rem 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.founder__container {
+  display: flex;
+  background-color: white;
+  gap: 3rem;
+}
+.founder__container-img {
+  width: 30%;
+  background-image: url("/public/assets/about/founder.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 40rem;
+}
+.founder__container-info {
+  width: 70%;
+  padding: 3rem;
+  margin: auto 0;
+}
+.founder__container-info-box {
+  height: 40%;
+  border: 2rem solid var(--primary-color);
+  padding: 3rem;
+}
+.founder__container-title {
+  font-size: 2rem;
+  text-align: left;
+}
+.founder__container-name {
+  font-size: 4rem;
+  text-align: left;
+}
+.founder__container-para {
+  font-size: var(--ff-size-14);
+  font-weight: 600;
+  margin-top: 3rem;
+  text-align: justify;
+}
+
+.goal__section {
+  padding: 3rem;
+}
+
+.goal__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.goal__card {
+  padding: 2rem;
+  width: 40%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+.goal__card-title {
+  font-size: 3rem;
+  color: white;
+}
+.goal__card-description {
+  font-size: var(--ff-size-14);
+  color: white;
+  font-weight: 200;
+}
+
+.export__section {
+  width: 100%;
+  background-image: url(/public/assets/about/export.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  margin-block: 2rem;
+}
+.export__section-title-box {
+  height: 7rem;
+  border-left: 2px solid white;
+  padding: 0.4rem 0.4rem 0.4rem 3rem;
+}
+.export__section-title {
+  font-size: 4rem;
+  font-weight: 200;
+  color: white;
+}
+.export__section-para-box {
+  width: 60%;
+  margin-top: 6rem;
+}
+.export__section-para {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.colab__section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 2rem;
+}
+.colab__section-title-box {
+  height: 4rem;
+  width: 35rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+}
+.colab__section-title {
+  color: white;
+}
+.colab__section-container {
+  width: 40%;
+}
+.colab__section-img {
+  width: 100%;
+  height: 50vh;
+  background-image: url(/public/assets/about/handshake.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.colab__section-para {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  width: 100%;
+  text-align: justify;
+}
+
 .underlined {
   border-bottom: 2px solid white !important;
 }
@@ -942,6 +1076,29 @@ body,
     color: var(--primary-color);
     padding-block: 1rem;
   }
+  .founder__container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .founder__container-img {
+    height: 75vh;
+    width: 100%;
+    background-position: center;
+  }
+  .founder__container-info {
+    width: 100%;
+  }
+  .founder__container-info-box {
+    padding: 1rem;
+  }
+  .goal__cards {
+    flex-direction: column;
+    flex-wrap: initial;
+    align-items: center;
+  }
+  .goal__card {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -1006,6 +1163,33 @@ body,
   }
   .farm__gallery-card:hover {
     width: 32rem;
+  }
+  .about__section {
+    padding: 8rem 0rem 0rem 0rem;
+  }
+  .founder__container-name {
+    font-size: 3.8rem;
+  }
+  .founder__container-info {
+    padding: 2rem;
+  }
+  .export__section-para-box {
+    width: 100%;
+  }
+  .colab__section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .colab__section-img {
+    min-width: 320px;
+    height: 60vh;
+    background-image: url(/public/assets/about/handshake.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .colab__section-container {
+    padding-inline: 2rem;
   }
 }
 
