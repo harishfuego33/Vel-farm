@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
+import { useRef } from "react";
 import axios from "axios";
 import Navfooter from "../components/navfooter";
 import UseNotification from "../hooks/usenotification";
@@ -18,9 +19,17 @@ const ContactSection = () => {
   const [mailId, setMailId] = useState("");
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
+  const [disabled, setDisabled] = useState(false);
   const { NotificationComponent, triggerNotification } =
     UseNotification("top-right");
   const handleSubmit = async (e) => {
+    setDisabled(true);
+    triggerNotification({
+      type: "info",
+      message: "sending please wait",
+      duration: 10000,
+      animation: "fade-in",
+    });
     e.preventDefault();
     try {
       const response = await axios.post(
@@ -33,25 +42,32 @@ const ContactSection = () => {
         }
       );
       if (response.data) {
+        setDisabled(false);
         triggerNotification({
           type: "success",
           message: "Email sent successfully",
-          duration: 3000,
+          duration: 10000,
           animation: "fade-in",
         });
+        setMailId("");
+        setSubject("");
+        setDescription("");
+        setFullName("");
       } else {
+        setDisabled(false);
         triggerNotification({
           type: "failed",
           message: "Email sent failed",
-          duration: 3000,
+          duration: 10000,
         });
       }
     } catch (error) {
+      setDisabled(false);
       console.log("Failed to send email!");
       triggerNotification({
         type: "error",
         message: "node mailer failed to start",
-        duration: 13000,
+        duration: 10000,
         animation: "fade-in",
       });
     }
@@ -142,7 +158,12 @@ const ContactSection = () => {
                   required
                 />
               </div>
-              <button className="contact__mail-btn">MAIL</button>
+              <button
+                className={`contact__mail-btn ${disabled ? "disable" : ""}`}
+                disabled={disabled}
+              >
+                MAIL
+              </button>
             </form>
           </div>
         </div>

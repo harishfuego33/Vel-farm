@@ -17,10 +17,19 @@ const UseNotification = (position = "top-right") => {
       notificationProps.duration
     );
   }, []);
+  const removeNotification = useCallback((id) => {
+    setNotification((prevNotifications) =>
+      prevNotifications.filter((notification) => notification.id !== id)
+    );
+  }, []);
   const NotificationComponent = notification ? (
     <div className={`${position}`}>
       {notification.map((notification) => (
-        <Toast key={notification.id} {...notification} />
+        <Toast
+          key={notification.id}
+          {...notification}
+          onClose={() => removeNotification(notification.id)}
+        />
       ))}
     </div>
   ) : null;

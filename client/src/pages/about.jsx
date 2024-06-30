@@ -116,23 +116,100 @@ const ExportSection = () => {
 const ColabSection = () => {
   return (
     <section className="colab__section">
-      <div className="colab__section-img"></div>
-      <div className="colob__section-container">
-        <div className="colab__section-title-box">
-          <h1 className="colab__section-title">
-            Openness to New Opportunities
-          </h1>
+      <div className="colab__section-container">
+        <div className="colab__section-container-1">
+          <div className="colab__section-title-box">
+            <h1 className="colab__section-title">
+              Openness to New Opportunities
+            </h1>
+          </div>
+          <p className="colab__section-para">
+            Vel Farms is open to diversifying its product range, collaborating
+            for export opportunities, and establishing overseas tie-ups to
+            enhance its international presence. We aim to build long-term
+            partnerships that foster mutual growth and benefit. Our focus is on
+            innovation and sustainability, ensuring we meet the evolving needs
+            of our global customers. Together, we can cultivate success and
+            expand our reach. Let&apos;s grow our businesses and farms hand in
+            hand for a prosperous future.
+          </p>
         </div>
-        <p className="colab__section-para">
-          Vel Farms is open to diversifying its product range, collaborating for
-          export opportunities, and establishing overseas tie-ups to enhance its
-          international presence. We aim to build long-term partnerships that
-          foster mutual growth and benefit. Our focus is on innovation and
-          sustainability, ensuring we meet the evolving needs of our global
-          customers. Together, we can cultivate success and expand our reach.
-          Let&apos;s grow our businesses and farms hand in hand for a prosperous
-          future.
-        </p>
+        <div className="colab__section-container-1">
+          <div className="colab__section-title-box">
+            <h1 className="colab__section-title">
+              Farm Infrastructure and Capacity
+            </h1>
+          </div>
+          <p className="colab__section-para">
+            Vel Farms boasts an expansive command area spread across more than
+            1,400 acres. Strategically located across five major river belts -
+            Amaravathi, Aliyar, Thirumoorthy, Noyyal, and Porunthalar, the farms
+            benefit from fertile soil and optimal climatic conditions, ideal for
+            coconut cultivation. Total Coconut Tree Capacity: 120,000 trees
+            Yielding Stage Trees: 90,000 trees
+          </p>
+        </div>
+        <div className="colab__section-container-1">
+          <div className="colab__section-title-box">
+            <h1 className="colab__section-title">
+              Comprehensive Infrastructure and Operations
+            </h1>
+          </div>
+          <h2 className="colab__section-sub-2">Company Infrastructure</h2>
+          <li className="colab__section-ul">Weighing Bridge</li>
+          <p className="colab__section-para margin-top-0">
+            <span className="dark--green">Capacity: </span>Integrated weighing
+            bridge for accurate measurement of coconut and its products.
+          </p>
+
+          <li className="colab__section-ul">
+            Storage Facilities and Labour Office
+          </li>
+          <p className="colab__section-para margin-top-0">
+            <span className="dark--green">Godown Capacity: </span>Stocking
+            capacity of up to 100 tons at a time, ensuring timely and efficient
+            supply chain management.
+          </p>
+          <p className="colab__section-para margin-top-0">
+            <span className="dark--green">Labour Office: </span>The labour
+            quarters accommodate 60 people and are situated in Zamin Muthur,
+            Pollachi.
+          </p>
+          <li className="colab__section-ul">Manpower</li>
+          <p className="colab__section-para margin-top-0">
+            <span className="dark--green">Capacity: </span>Integrated weighing
+            bridge for accurate measurement of coconut and its products.
+          </p>
+          <li className="colab__section-ul">Customized Supply Solutions</li>
+          <p className="colab__section-para margin-top-0">
+            Vel Farms offers tailored packaging to meet specific customer
+            requirements and efficient, organized bulk packaging to cater to
+            larger orders and diverse market needs.
+          </p>
+          <p className="colab__section-para margin-top-0">
+            <span className="dark--green">Loose(A-la-carte)Packing:</span>
+            Tailored packaging to meet specific customer requirements.
+          </p>
+          <p className="colab__section-para margin-top-0">
+            <span className="dark--green">
+              Bulk Quality Segregated Packing:
+            </span>
+            Efficient and organized bulk packaging to cater to larger orders and
+            diverse market needs
+          </p>
+        </div>
+      </div>
+      <div className="colab__section-img">
+        <img
+          src="/assets/about/handshake-1.webp"
+          alt="farms-log"
+          className="about__img"
+        />
+        <img
+          src="/assets/about/handshake.webp"
+          alt="farms-log"
+          className="about__img"
+        />
       </div>
     </section>
   );

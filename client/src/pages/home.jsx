@@ -15,7 +15,7 @@ const Greet = () => {
     <section className="greet__section">
       <article className="greet__section-article">
         <h1 className="greet__welcome">WELCOME TO</h1>
-        <span className="greet__name">VEL FARMS</span>
+        <h1 className="greet__name">VEL FARMS</h1>
         <p className="greet__para">
           we dedicated to providing the highest quality coconut products while
           maintaining sustainable farming practices.
