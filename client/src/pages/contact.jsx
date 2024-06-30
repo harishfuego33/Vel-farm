@@ -46,7 +46,7 @@ const ContactSection = () => {
         triggerNotification({
           type: "success",
           message: "Email sent successfully",
-          duration: 10000,
+          duration: 3000,
           animation: "fade-in",
         });
         setMailId("");
@@ -58,7 +58,7 @@ const ContactSection = () => {
         triggerNotification({
           type: "failed",
           message: "Email sent failed",
-          duration: 10000,
+          duration: 3000,
         });
       }
     } catch (error) {
@@ -67,7 +67,7 @@ const ContactSection = () => {
       triggerNotification({
         type: "error",
         message: "node mailer failed to start",
-        duration: 10000,
+        duration: 3000,
         animation: "fade-in",
       });
     }
