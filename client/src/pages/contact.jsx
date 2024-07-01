@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
-import { useRef } from "react";
 import axios from "axios";
 import Navfooter from "../components/navfooter";
 import UseNotification from "../hooks/usenotification";

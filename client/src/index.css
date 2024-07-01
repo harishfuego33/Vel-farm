@@ -998,7 +998,7 @@ body,
 .product__section {
   min-height: 100vh;
   min-width: 320px;
-  background-image: url(public/assets/pages/product.webp);
+  background-image: url(/assets/pages/product.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
