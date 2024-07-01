@@ -33,7 +33,7 @@
   display: inline;
   font-size: var(--ff-size-100);
   font-weight: 400;
-  margin-bottom: -2rem;
+  line-height: 1;
   animation: slide-right 1s;
   animation-delay: 0.2s;
 }
@@ -42,7 +42,8 @@
   font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
-  margin-top: -4rem;
+
+  line-height: 1;
   animation: slide-left 1s;
   animation-delay: 0.2s;
 }
@@ -134,7 +135,8 @@
   display: inline-flex;
   width: max-content;
   align-items: center;
-  padding-inline: 6rem;
+  padding-right: 6rem;
+  padding-left: 2rem;
   margin-bottom: 0.5rem;
   font-size: var(--ff-size-18);
   background-color: var(--primary-color);

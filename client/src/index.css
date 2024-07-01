@@ -197,7 +197,7 @@ body,
   display: inline;
   font-size: var(--ff-size-100);
   font-weight: 400;
-  margin-bottom: -2rem;
+  line-height: 1;
   animation: slide-right 1s;
   animation-delay: 0.2s;
 }
@@ -207,7 +207,7 @@ body,
   font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
-  margin-top: -4rem;
+  line-height: 1;
   animation: slide-left 1s;
   animation-delay: 0.2s;
 }
@@ -313,7 +313,8 @@ body,
   display: inline-flex;
   width: max-content;
   align-items: center;
-  padding-inline: 6rem;
+  padding-right: 6rem;
+  padding-left: 2rem;
   margin-bottom: 0.5rem;
   font-size: var(--ff-size-18);
   background-color: var(--primary-color);
@@ -1361,15 +1362,7 @@ body,
     --ff-size-16: 2.4rem;
     --ff-size-12: 1.8rem;
   }
-  .greet__welcome {
-    margin-bottom: -9rem;
-  }
-  .greet__name {
-    margin-block: -8rem;
-  }
-  .agriculture_section {
-    min-height: auto;
-  }
+  .agriculture_section,
   .about__section {
     min-height: auto;
   }
