@@ -279,7 +279,7 @@ body,
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
-  min-height: 20rem;
+  min-height: 30rem;
 }
 
 .slides {
@@ -866,6 +866,7 @@ body,
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 40rem;
+  max-height: 100vh;
 }
 .founder__container-info {
   width: 70%;
@@ -1271,6 +1272,77 @@ body,
   }
 }
 @media (min-height: 1223px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 1000px) {
+  .product__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .nav-bar__options {
+    display: none;
+  }
+  .ag-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: initial;
+  }
+  .ag-practice,
+  .ag-title {
+    width: 100%;
+  }
+  .contact__img-box {
+    padding: 10rem 2rem 2rem 2rem;
+  }
+  .coconut__gallery {
+    align-self: center;
+  }
+  .hamburger__btn {
+    display: initial;
+  }
+  .slide__navigation {
+    display: flex;
+  }
+  .nav-bar__option {
+    color: var(--primary-color);
+    padding-block: 1rem;
+  }
+  .founder__container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .founder__container-img {
+    height: 70rem;
+    width: 100%;
+    background-position: center;
+  }
+  .founder__container-info {
+    width: 100%;
+  }
+  .founder__container-info-box {
+    padding: 1rem;
+  }
+  .goal__cards {
+    flex-direction: column;
+    flex-wrap: initial;
+    align-items: center;
+  }
+  .goal__card {
+    width: 100%;
+  }
+  .product__section {
+    padding: 8rem 2rem 2rem 2rem;
+    align-items: center;
+  }
+  .product__section-sub {
+    margin-right: 0;
+  }
+  .product__heading {
+    height: auto;
+  }
   .agriculture_section {
     min-height: auto;
   }
@@ -1313,6 +1385,9 @@ body,
   }
   .product__heading-box {
     height: 23rem;
+  }
+  .greet__welcome {
+    height: auto;
   }
 }
 @media (max-width: 1000px) {
