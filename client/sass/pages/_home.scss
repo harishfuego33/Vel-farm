@@ -5,21 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
   align-items: center;
   padding: 8rem 6rem 6rem 6rem;
-}
-.greet__section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1px);
-  z-index: 1;
 }
 .greet__section-article {
   display: flex;

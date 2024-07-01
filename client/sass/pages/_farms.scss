@@ -4,20 +4,11 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 6rem 4rem 4rem 4rem;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   min-height: 100vh;
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.58);
-    backdrop-filter: blur(1px);
-    z-index: 1;
-  }
 }
 .farm__gallery {
   &-cards {

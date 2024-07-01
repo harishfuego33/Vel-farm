@@ -10,14 +10,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.58);
-    backdrop-filter: blur(1px);
-    z-index: 1;
-  }
 }
 .foot__box-1 {
   display: flex;
@@ -26,11 +18,9 @@
   flex-wrap: wrap;
   gap: 3rem;
   position: relative;
-  z-index: 5;
 }
 .footer__list {
   position: relative;
-  z-index: 3;
   display: flex;
   gap: 2rem;
   border-top: 2px solid white;

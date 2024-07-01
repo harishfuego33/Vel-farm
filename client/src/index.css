@@ -166,22 +166,9 @@ body,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
   align-items: center;
   padding: 8rem 6rem 6rem 6rem;
-}
-
-.greet__section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1px);
-  z-index: 1;
 }
 
 .greet__section-article {
@@ -437,24 +424,15 @@ body,
 }
 
 .contact__img-box {
-  background-image: url("../public/assets/pages/contact-2.webp");
+  background-image: url("../public/assets/pages/contact.webp");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   padding: 10rem 4rem 4rem 4rem;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.contact__img-box::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.183);
-  backdrop-filter: blur(1px);
-  z-index: 1;
 }
 
 .contact__title {
@@ -603,20 +581,11 @@ body,
   background-repeat: no-repeat;
   background-position: center;
   padding: 6rem 4rem 4rem 4rem;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   min-height: 100vh;
-}
-.farm__section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.58);
-  backdrop-filter: blur(1px);
-  z-index: 1;
 }
 
 .farm__gallery-cards {
@@ -703,14 +672,6 @@ body,
   align-items: center;
   justify-content: space-evenly;
 }
-.footer__section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.58);
-  backdrop-filter: blur(1px);
-  z-index: 1;
-}
 
 .foot__box-1 {
   display: flex;
@@ -719,12 +680,10 @@ body,
   flex-wrap: wrap;
   gap: 3rem;
   position: relative;
-  z-index: 5;
 }
 
 .footer__list {
   position: relative;
-  z-index: 3;
   display: flex;
   gap: 2rem;
   border-top: 2px solid white;

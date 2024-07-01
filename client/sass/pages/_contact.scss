@@ -1,22 +1,13 @@
 .contact__img-box {
-  background-image: url("../public/assets/pages/contact-2.webp");
+  background-image: url("../public/assets/pages/contact.webp");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   padding: 10rem 4rem 4rem 4rem;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.183);
-    backdrop-filter: blur(1px);
-    z-index: 1;
-  }
 }
 .contact__title {
   z-index: 10;
