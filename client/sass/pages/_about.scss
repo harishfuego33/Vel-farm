@@ -96,7 +96,7 @@
     margin-top: 6rem;
   }
   &-para {
-    font-size: 1.6rem;
+    font-size: var(--ff-size-16);
     color: white;
     font-weight: 200;
     text-align: justify;
@@ -129,14 +129,14 @@
   }
   &-para {
     margin-top: 2rem;
-    font-size: 1.4rem;
+    font-size: var(--ff-size-14);
     text-align: justify;
   }
   &-sub-2 {
-    font-size: 2rem;
+    font-size: var(--ff-size-20);
   }
   &-ul {
-    font-size: 1.6rem;
+    font-size: var(--ff-size-16);
     font-weight: 600;
     list-style-position: unset;
     margin-left: 2rem;

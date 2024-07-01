@@ -94,6 +94,9 @@ const ProductCard = ({ title, description, image }) => {
         </div>
       </div>
       <div className="product__card-back">
+        <div className="logo-box">
+          <img src="/assets/logo.png" alt="farms-log" className="logo" />
+        </div>
         <p className="product__description-back">
           TO PURCHASE THE PRODUCT PLEASE SEND A MAIL TO RESPECT MAIL ID OR CALL
           US

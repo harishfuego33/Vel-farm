@@ -27,13 +27,16 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 100vh;
+    height: 70vh;
   }
   &-card {
     position: relative;
     height: 90%;
     width: calc(100% / 7);
+    min-height: 50rem;
+    max-width: 30rem;
     border-radius: 3px;
+    max-height: 60rem;
     transition: all 0.4s;
     &:hover {
       width: calc(100% / 2);

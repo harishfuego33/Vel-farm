@@ -83,7 +83,7 @@
     }
   }
   &__input-info {
-    font-size: 1.2rem;
+    font-size: var(--ff-size-12);
     color: var(--primary-color);
     &::after {
       content: " *";
@@ -131,17 +131,17 @@
   }
   &__get-in {
     color: var(--primary-color);
-    font-size: 3rem;
+    font-size: var(--ff-size-20);
   }
   &__quotes {
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-size: var(--ff-size-14);
+    font-weight: 400;
     color: var(--primary-color);
     position: relative;
     z-index: 2;
   }
   &__address {
-    font-size: 1.6rem;
+    font-size: var(--ff-size-16);
     margin-block: 1rem;
     color: var(--primary-color);
   }
