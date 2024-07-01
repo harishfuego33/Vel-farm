@@ -62,25 +62,40 @@
 }
 @keyframes slide-top-down {
   0% {
-    transform: translateY(100rem);
+    transform: translateY(30rem);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
   }
   100% {
+    opacity: 1;
     transform: translateY(0rem);
   }
 }
 @keyframes slide-bottom-up {
   0% {
-    transform: translateY(-100rem);
+    transform: translateY(-30rem);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
   }
   100% {
     transform: translateY(0rem);
+    opacity: 1;
   }
 }
 @keyframes slide-left-right {
   0% {
-    transform: translateX(100rem);
+    transform: translateX(30rem);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
   }
   100% {
     transform: translateX(0rem);
+    opacity: 1;
   }
 }
