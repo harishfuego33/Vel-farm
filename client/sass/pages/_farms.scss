@@ -23,11 +23,11 @@
   &-cards {
     display: flex;
     gap: 2rem;
-    padding: 1rem 1rem;
+    padding: 1rem;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 70vh;
+    height: 100vh;
   }
   &-card {
     position: relative;

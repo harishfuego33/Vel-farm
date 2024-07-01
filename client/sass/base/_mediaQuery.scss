@@ -39,6 +39,9 @@
     width: 50rem;
     height: 74rem;
   }
+  .product__heading-box {
+    height: 23rem;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -98,7 +101,6 @@
   .goal__card {
     width: 100%;
   }
-
   .product__section {
     padding: 8rem 2rem 2rem 2rem;
     align-items: center;
@@ -139,7 +141,7 @@
   }
   .coconut__gallery {
     width: 100%;
-    height: 30rem;
+    height: 40rem;
   }
   .ag-container {
     padding: 1rem;
@@ -219,5 +221,9 @@
   }
   .product__section-sub {
     text-align: center;
+  }
+  .product__heading,
+  .product__heading-box {
+    height: 10rem;
   }
 }

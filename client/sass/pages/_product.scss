@@ -29,7 +29,7 @@
 .product__heading-box {
   overflow: hidden;
   display: inline-block;
-  height: 23rem;
+  height: 16rem;
 }
 ._green {
   color: var(--secondary-color);
@@ -58,11 +58,11 @@
   &__card {
     position: relative;
     width: 32rem;
-    height: 50rem;
+    height: 39rem;
   }
   &__image-box {
     width: 100%;
-    height: 60%;
+    height: 50%;
     border-radius: 2rem;
   }
   &__description-box {

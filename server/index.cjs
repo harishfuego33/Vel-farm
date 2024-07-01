@@ -27,9 +27,7 @@ app.post("/contact", (req, res) => {
     from: mailId, // sender address
     to: "harishkumar.ct20@bitsathy.ac.in", // list of receivers
     subject: subject, // Subject line
-    text: description, // plain text body
-    name: fullName,
-    html: `<p>${(fullName, description)}</p>`, // html body
+    text: `hi👋 iam ${fullName.toUpperCase()} \n MAIL ID: ${mailId} \n DESCRIPTION: ${description}`, // plain text body
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {

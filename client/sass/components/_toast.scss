@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  // height: 4rem;
   font-size: var(--ff-size-14);
   padding: 2rem;
   color: white;
@@ -24,7 +23,7 @@
 .top-right {
   position: fixed;
   right: 3rem;
-  top: 2rem;
+  top: 4rem;
   z-index: 100;
 }
 .top-left {

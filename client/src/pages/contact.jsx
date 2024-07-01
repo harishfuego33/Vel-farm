@@ -25,8 +25,8 @@ const ContactSection = () => {
     setDisabled(true);
     triggerNotification({
       type: "info",
-      message: "sending please wait",
-      duration: 10000,
+      message: "Mail sending please wait",
+      duration: 6000,
       animation: "fade-in",
     });
     e.preventDefault();
@@ -45,7 +45,7 @@ const ContactSection = () => {
         triggerNotification({
           type: "success",
           message: "Email sent successfully",
-          duration: 3000,
+          duration: 6000,
           animation: "fade-in",
         });
         setMailId("");
@@ -57,16 +57,15 @@ const ContactSection = () => {
         triggerNotification({
           type: "failed",
           message: "Email sent failed",
-          duration: 3000,
+          duration: 6000,
         });
       }
     } catch (error) {
       setDisabled(false);
-      console.log("Failed to send email!");
       triggerNotification({
         type: "error",
-        message: "node mailer failed to start",
-        duration: 3000,
+        message: "mailer failed to start",
+        duration: 6000,
         animation: "fade-in",
       });
     }
