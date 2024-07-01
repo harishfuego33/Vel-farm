@@ -88,5 +88,6 @@
   }
   &-card:hover > &-overlay {
     opacity: 0;
+    backface-visibility: hidden;
   }
 }

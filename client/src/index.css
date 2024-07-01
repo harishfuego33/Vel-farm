@@ -190,7 +190,6 @@ body,
   color: white;
   z-index: 2;
   width: 100%;
-  gap: 0;
 }
 
 .greet__welcome {
@@ -198,7 +197,7 @@ body,
   display: inline;
   font-size: var(--ff-size-100);
   font-weight: 400;
-  height: 10rem;
+  margin-bottom: -2rem;
   animation: slide-right 1s;
   animation-delay: 0.2s;
 }
@@ -208,7 +207,7 @@ body,
   font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
-  height: 16rem;
+  margin-top: -4rem;
   animation: slide-left 1s;
   animation-delay: 0.2s;
 }
@@ -687,6 +686,7 @@ body,
 }
 .farm__gallery-card:hover > .farm__gallery-overlay {
   opacity: 0;
+  backface-visibility: hidden;
 }
 
 .footer__section {
@@ -858,6 +858,7 @@ body,
   display: flex;
   background-color: white;
   gap: 3rem;
+  min-height: 70vh;
 }
 .founder__container-img {
   width: 30%;
@@ -866,7 +867,6 @@ body,
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 40rem;
-  max-height: 100vh;
 }
 .founder__container-info {
   width: 70%;
@@ -1271,9 +1271,9 @@ body,
     opacity: 1;
   }
 }
-@media (min-height: 1223px) {
+@media (min-height: 1600px) {
   html {
-    font-size: 70%;
+    font-size: 90%;
   }
 }
 @media (max-width: 1000px) {
@@ -1362,10 +1362,10 @@ body,
     --ff-size-12: 1.8rem;
   }
   .greet__welcome {
-    height: 20rem;
+    margin-bottom: -9rem;
   }
   .greet__name {
-    height: auto;
+    margin-block: -8rem;
   }
   .agriculture_section {
     min-height: auto;
@@ -1385,9 +1385,6 @@ body,
   }
   .product__heading-box {
     height: 23rem;
-  }
-  .greet__welcome {
-    height: auto;
   }
 }
 @media (max-width: 1000px) {

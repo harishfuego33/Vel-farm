@@ -27,14 +27,13 @@
   color: white;
   z-index: 2;
   width: 100%;
-  gap: 0;
 }
 .greet__welcome {
   color: white;
   display: inline;
   font-size: var(--ff-size-100);
   font-weight: 400;
-  height: 10rem;
+  margin-bottom: -2rem;
   animation: slide-right 1s;
   animation-delay: 0.2s;
 }
@@ -43,7 +42,7 @@
   font-size: var(--ff-size-130);
   font-weight: 600;
   letter-spacing: 0.5rem;
-  height: 16rem;
+  margin-top: -4rem;
   animation: slide-left 1s;
   animation-delay: 0.2s;
 }
