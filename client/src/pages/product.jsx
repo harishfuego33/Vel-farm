@@ -1,11 +1,35 @@
 import { NavLink } from "react-router-dom";
 import NavFooter from "../components/navfooter";
+import NavBar from "../components/navbar";
+import { useEffect, useState } from "react";
+import Loader from "../components/loader";
 const Product = () => {
+  const [loading, isLoading] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => isLoading(false), 2000);
+  // }, []);
+  useEffect(() => {
+    const handleLoad = () => {
+      isLoading(false);
+    };
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+  if (loading === false) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="product__main">
-      <ProductSection />
-      <ProductList />
-      <NavFooter />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <NavBar />
+          <ProductSection />
+          <ProductList />
+          <NavFooter />
+        </>
+      )}
     </main>
   );
 };

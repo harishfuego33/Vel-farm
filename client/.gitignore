@@ -26,4 +26,6 @@ server.cjs
 .env
 
 vercel.json
-
+.firebaserc
+firebase.json
+.firebase

@@ -1,12 +1,37 @@
 import Navfooter from "../components/navfooter";
+import Loader from "../components/loader";
+import NavBar from "../components/navbar";
+
+import { useEffect, useState } from "react";
 const About = () => {
+  const [loading, isLoading] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => isLoading(false), 2000);
+  // }, []);
+  useEffect(() => {
+    const handleLoad = () => {
+      isLoading(false);
+    };
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+  if (loading === false) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="about__main">
-      <AboutSection />
-      <GoalSection />
-      <ExportSection />
-      <ColabSection />
-      <Navfooter />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <NavBar />
+          <AboutSection />
+          <GoalSection />
+          <ExportSection />
+          <ColabSection />
+          <Navfooter />
+        </>
+      )}
     </main>
   );
 };

@@ -1,14 +1,37 @@
-import { useState } from "react";
-import { SlLocationPin } from "react-icons/sl";
 import axios from "axios";
+import { useState, useEffect } from "react";
+import { SlLocationPin } from "react-icons/sl";
 import Navfooter from "../components/navfooter";
 import UseNotification from "../hooks/usenotification";
+import NavBar from "../components/navbar";
+import Loader from "../components/loader";
 
 const Contact = () => {
+  const [loading, isLoading] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => isLoading(false), 2000);
+  // }, []);
+  useEffect(() => {
+    const handleLoad = () => {
+      isLoading(false);
+    };
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+  if (loading === false) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="contact__main">
-      <ContactSection />;
-      <Navfooter />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <NavBar />
+          <ContactSection />;
+          <Navfooter />
+        </>
+      )}
     </main>
   );
 };

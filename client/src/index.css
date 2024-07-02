@@ -186,7 +186,6 @@ body,
   font-weight: 400;
   line-height: 1;
   animation: slide-right 1s;
-  animation-delay: 0.2s;
 }
 
 .greet__name {
@@ -196,7 +195,6 @@ body,
   letter-spacing: 0.5rem;
   line-height: 1;
   animation: slide-left 1s;
-  animation-delay: 0.2s;
 }
 
 .greet__para {
@@ -331,8 +329,9 @@ body,
 .farm__main,
 .product__main {
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow-x: hidden;
   min-width: 320px;
+  position: relative;
 }
 
 .cards {
