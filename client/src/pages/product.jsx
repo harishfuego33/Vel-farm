@@ -17,7 +17,7 @@ const Product = () => {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
-  if (loading === false) setTimeout(() => isLoading(false), 1000);
+  if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="product__main">
       {loading ? (
@@ -57,7 +57,7 @@ const ProductList = () => {
     {
       title: "Coconut Milk",
       description:
-        " Vel Agency produces high-quality coconut milk known for its rich and creamy texture. It is perfect for culinary uses, enhancing the flavor of various dishes. The milk is extracted from fresh coconuts to ensure purity and taste",
+        "Vel Farms produces high-quality coconut milk known for its rich and creamy texture. It is perfect for culinary uses and enhances the flavor of various dishes. The milk is extracted from fresh coconuts to ensure purity and taste.",
       image: "/assets/product/product-1.webp",
     },
     {
@@ -69,31 +69,31 @@ const ProductList = () => {
     {
       title: "Desiccated Coconut",
       description:
-        " The desiccated coconut from Vel Agency is finely grated and dried to perfection. It is ideal for baking and cooking, adding a natural sweetness and texture. This product retains the full flavor and nutrients of fresh coconuts",
+        "The desiccated coconut from Vel farms is finely grated and dried to perfection. It is ideal for baking and cooking, adding a natural sweetness and texture. This product retains the full flavor and nutrients of fresh coconuts.",
       image: "/assets/product/product-3.webp",
     },
     {
       title: "Wood Pressed Coconut Oil",
       description:
-        "The wood pressed coconut oil from Vel Agency is made using traditional methods, ensuring maximum nutrient retention. This oil has a rich, natural taste and is ideal for cooking and cosmetic uses. It is produced without any chemicals or preservatives.",
+        "The wood-pressed coconut oil from Vel farms is made using traditional methods, ensuring maximum nutrient retention. This oil has a rich, natural taste and is ideal for cooking and cosmetic uses. It is produced without any chemicals or preservatives.",
       image: "/assets/product/product-4.webp",
     },
     {
       title: "Packed Tender Coconut   (No Preservatives)",
       description:
-        "Vel Agency offers packed tender coconut water, which is naturally refreshing and hydrating. The water is extracted from young coconuts and packed without any preservatives. This ensures a pure and healthy beverage option.",
+        "Vel Farms offers packed tender coconut water, which is naturally refreshing and hydrating. The water is extracted from young coconuts and packed without any preservatives. This ensures a pure and healthy beverage option.",
       image: "/assets/product/product-5.webp",
     },
     {
       title: "Coconut Copra",
       description:
-        " Vel Agency produces high-quality copra from carefully dried coconut meat, ideal for oil extraction and culinary use. Our copra retains its nutritional value and rich flavor, processed under strict quality control standards. We are committed to delivering the best copra for your needs.",
+        "Vel Farms produces high-quality copra from carefully dried coconut meat, ideal for oil extraction and culinary use. Our copra retains its nutritional value and rich flavor, processed under strict quality control standards. We are committed to delivering the best copra for your needs.",
       image: "/assets/product/product-6.webp",
     },
     {
       title: "Coir Products",
       description:
-        "At Vel Farms, we produce high-quality coir products from coconut husks. Our range includes durable coir mats, ropes, and garden products. These eco-friendly items support soil health and plant growth, reflecting our commitment to sustainability and full utilization of the coconut.",
+        "At Vel Farms, we produce high-quality coir products from coconut husks. Our range includes durable coir mats, ropes, and garden products. These eco-friendly items support soil health and plant growth, reflecting our commitment to sustainability and the full utilization of the coconut.",
       image: "/assets/product/product-7.webp",
     },
   ];

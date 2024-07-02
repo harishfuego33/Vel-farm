@@ -36,30 +36,40 @@ const SlideIn = ({ active, setActive }) => {
   return (
     <div className={`slide__navigation ${active ? "slid-in" : ""}`}>
       <ul className="slide__options ">
-        <NavBtn name={"Home"} to={"/"} active={active} setActive={setActive} />
+        <NavBtn
+          name={"Home"}
+          to={"/"}
+          active={active}
+          setActive={setActive}
+          classN=" underlined-green"
+        />
         <NavBtn
           name={"Farms"}
           to={"/farm"}
           active={active}
           setActive={setActive}
+          classN=" underlined-green"
         />
         <NavBtn
           name={"Product"}
           to={"/product"}
           active={active}
           setActive={setActive}
+          classN=" underlined-green"
         />
         <NavBtn
           name={"About us"}
           to={"/about"}
           active={active}
           setActive={setActive}
+          classN=" underlined-green"
         />
         <NavBtn
           name={"Contact us"}
           to={"/contact"}
           active={active}
           setActive={setActive}
+          classN=" underlined-green"
         />
       </ul>
     </div>

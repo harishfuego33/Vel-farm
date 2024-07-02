@@ -21,7 +21,7 @@ const Loader = () => {
   };
   return (
     <div className="loader" style={style}>
-      <div className="loader-box" style={style2}>
+      <div className="loader-box breath" style={style2}>
         <img
           src="/assets/logo.png"
           alt="logo"

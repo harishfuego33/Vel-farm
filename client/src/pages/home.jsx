@@ -16,7 +16,7 @@ const Home = () => {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
-  if (loading === false) setTimeout(() => isLoading(false), 1000);
+  if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="home__main">
       {loading ? (
@@ -187,11 +187,8 @@ const SuppliesCoconutVarieties = () => {
           </h4>
           <ul className="card__list">
             <ll className="card__list-items">
-              <span className="dark--green">Price: </span>
-              <span className="rupees">₹</span>29/kg |{" "}
-              <span className="dark--green">Price per ton:</span>{" "}
-              <span className="rupees">₹</span>
-              29,000
+              The price cannot be determined in advance as it varies according
+              to market conditions.
             </ll>
             <ll className="card__list-items">
               {" "}
@@ -222,12 +219,10 @@ const SuppliesCoconutVarieties = () => {
           </h4>
           <ul className="card__list">
             <ll className="card__list-items">
-              <span className="dark--green">Price: </span>
-              <span className="rupees">₹</span>31/kg |{" "}
-              <span className="dark--green">Price per ton:</span>{" "}
-              <span className="rupees">₹</span>
-              31,000
+              The price cannot be determined in advance as it varies according
+              to market conditions.
             </ll>
+
             <ll className="card__list-items">
               {" "}
               <span className="dark--green">Yield Time:</span> 50 and above days
@@ -258,12 +253,10 @@ const SuppliesCoconutVarieties = () => {
           </h4>
           <ul className="card__list">
             <ll className="card__list-items">
-              <span className="dark--green">Price: </span>
-              <span className="rupees">₹</span>35/kg |{" "}
-              <span className="dark--green">Price per ton:</span>{" "}
-              <span className="rupees">₹</span>
-              35,000
+              The price cannot be determined in advance as it varies according
+              to market conditions.
             </ll>
+
             <ll className="card__list-items">
               {" "}
               <span className="dark--green">Yield Time:</span> 50 and above days

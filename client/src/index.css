@@ -130,12 +130,14 @@ body,
   transition: transform 1s;
 }
 .hamburger__btn.active .hamburger__btn-line1 {
+  background-color: var(--primary-color);
   transform: rotate(135deg) translate(9px, -9px);
 }
 .hamburger__btn.active .hamburger__btn-line2 {
   opacity: 0;
 }
 .hamburger__btn.active .hamburger__btn-line3 {
+  background-color: var(--primary-color);
   transform: rotate(-135deg) translate(8px, 8px);
 }
 
@@ -146,7 +148,7 @@ body,
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.315);
+  background-color: rgb(255, 255, 255);
   backdrop-filter: blur(2px) brightness(80%);
   z-index: 1000;
   transform: translate(100%);
@@ -309,7 +311,6 @@ body,
 
 .ag-para {
   font-size: var(--ff-size-14);
-  color: var(--primary-color);
 }
 
 .ag-para:not(:last-child) {
@@ -639,7 +640,6 @@ body,
   color: white;
   z-index: 4;
   padding: 2rem;
-  transition: opacity 0.2s;
   background-color: rgba(0, 0, 0, 0.58);
 }
 .farm__gallery-card:hover > .farm__gallery-para {
@@ -1097,6 +1097,10 @@ body,
   border-bottom: 2px solid white !important;
 }
 
+.underlined-green {
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
 .hr {
   display: block;
   height: 1px;
@@ -1130,6 +1134,21 @@ body,
   background-color: white;
 }
 
+.breath {
+  animation: breath 1s infinite ease-in-out;
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes pop-up {
   0% {
     transform: scale(0.6);

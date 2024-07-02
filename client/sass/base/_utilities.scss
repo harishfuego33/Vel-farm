@@ -1,6 +1,9 @@
 .underlined {
   border-bottom: 2px solid white !important;
 }
+.underlined-green {
+  border-bottom: 2px solid var(--primary-color) !important;
+}
 .hr {
   display: block;
   height: 1px;
@@ -28,4 +31,19 @@
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   background-color: white;
+}
+.breath {
+  animation: breath 1s infinite ease-in-out;
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

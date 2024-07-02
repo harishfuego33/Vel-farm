@@ -17,7 +17,7 @@ const About = () => {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
-  if (loading === false) setTimeout(() => isLoading(false), 1000);
+  if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="about__main">
       {loading ? (
@@ -68,9 +68,9 @@ const GoalSection = () => {
   return (
     <section className="goal__section">
       <h1 className="heading__primary">
-        Our <span className="secondary__color">Story </span>,
-        <span className="secondary__color">Vision </span>
-        and <span className="secondary__color">Mission</span>
+        <span className="secondary__color">Our </span> Story, Vision{" "}
+        <span className="secondary__color">and </span>
+        Mission
       </h1>
       <div className="goal__cards">
         <div className="goal__card">

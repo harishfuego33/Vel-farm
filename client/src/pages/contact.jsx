@@ -20,7 +20,7 @@ const Contact = () => {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
-  if (loading === false) setTimeout(() => isLoading(false), 1000);
+  if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="contact__main">
       {loading ? (
