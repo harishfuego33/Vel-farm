@@ -31,16 +31,16 @@ const Farms = () => {
   // if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="farm__main">
-      {loading ? (
+      {/* {loading ? (
         <Loader />
       ) : (
-        <>
-          <NavBar />
-          <FarmSection />
-          <FarmGallery />
-          <Navfooter />
-        </>
-      )}
+        <> */}
+      <NavBar />
+      <FarmSection />
+      <FarmGallery />
+      <Navfooter />
+      {/* </>
+      )} */}
     </main>
   );
 };

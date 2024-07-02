@@ -32,16 +32,16 @@ const Product = () => {
   // if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="product__main">
-      {loading ? (
+      {/* {loading ? (
         <Loader />
       ) : (
-        <>
-          <NavBar />
-          <ProductSection />
-          <ProductList />
-          <NavFooter />
-        </>
-      )}
+        <> */}
+      <NavBar />
+      <ProductSection />
+      <ProductList />
+      <NavFooter />
+      {/* </>
+      )} */}
     </main>
   );
 };

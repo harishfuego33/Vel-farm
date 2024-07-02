@@ -35,15 +35,15 @@ const Contact = () => {
   // if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="contact__main">
-      {loading ? (
+      {/* {loading ? (
         <Loader />
       ) : (
-        <>
-          <NavBar />
-          <ContactSection />;
-          <Navfooter />
-        </>
-      )}
+        <> */}
+      <NavBar />
+      <ContactSection />;
+      <Navfooter />
+      {/* </>
+      )} */}
     </main>
   );
 };

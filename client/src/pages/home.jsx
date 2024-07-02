@@ -31,18 +31,18 @@ const Home = () => {
   // if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="home__main">
-      {loading ? (
+      {/* {loading ? (
         <Loader />
       ) : (
-        <>
-          <NavBar />
-          <Greet />
-          <AgricultureSustainability />
-          <SuppliesCoconutVarieties />
-          <MatureCoconutVarieties />
-          <Navfooter />
-        </>
-      )}
+        <> */}
+      <NavBar />
+      <Greet />
+      <AgricultureSustainability />
+      <SuppliesCoconutVarieties />
+      <MatureCoconutVarieties />
+      <Navfooter />
+      {/* </>
+      )} */}
     </main>
   );
 };

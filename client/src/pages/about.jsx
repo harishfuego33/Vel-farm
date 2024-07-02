@@ -30,18 +30,18 @@ const About = () => {
   // if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="about__main">
-      {loading ? (
+      {/* {loading ? (
         <Loader />
       ) : (
-        <>
-          <NavBar />
-          <AboutSection />
-          <GoalSection />
-          <ExportSection />
-          <ColabSection />
-          <Navfooter />
-        </>
-      )}
+        <> */}
+      <NavBar />
+      <AboutSection />
+      <GoalSection />
+      <ExportSection />
+      <ColabSection />
+      <Navfooter />
+      {/* </>
+      )} */}
     </main>
   );
 };
