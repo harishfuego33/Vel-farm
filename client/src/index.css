@@ -601,8 +601,8 @@ body,
   position: relative;
   height: 90%;
   width: 14.2857142857%;
-  min-height: 50rem;
-  max-width: 30rem;
+  min-height: 52rem;
+  max-width: 320rem;
   border-radius: 3px;
   max-height: 60rem;
   transition: all 0.4s;
@@ -633,7 +633,7 @@ body,
   cursor: default;
   position: absolute;
   font-size: 1.8rem;
-  opacity: 0;
+  display: none;
   bottom: 0;
   left: 0;
   height: 55%;
@@ -643,7 +643,7 @@ body,
   background-color: rgba(0, 0, 0, 0.58);
 }
 .farm__gallery-card:hover > .farm__gallery-para {
-  opacity: 1;
+  display: initial;
 }
 .farm__gallery-overlay {
   position: absolute;

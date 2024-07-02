@@ -18,7 +18,7 @@ const About = () => {
   useEffect(() => {
     const checkScreenWidth = () => {
       if (window.innerWidth < 768 && loading === true) {
-        const timer = setTimeout(() => isLoading(false), 1000);
+        const timer = setTimeout(() => isLoading(false), 4000);
         return () => clearTimeout(timer);
       }
     };
