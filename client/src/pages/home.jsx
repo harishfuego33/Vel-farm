@@ -16,7 +16,19 @@ const Home = () => {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
-  if (loading === true) setTimeout(() => isLoading(false), 1000);
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      if (window.innerWidth < 768 && loading === true) {
+        const timer = setTimeout(() => isLoading(false), 1000);
+        return () => clearTimeout(timer);
+      }
+    };
+    checkScreenWidth();
+    window.addEventListener("resize", checkScreenWidth);
+
+    return () => window.removeEventListener("resize", checkScreenWidth);
+  }, [loading]);
+  // if (loading === true) setTimeout(() => isLoading(false), 1000);
   return (
     <main className="home__main">
       {loading ? (
