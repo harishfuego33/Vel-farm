@@ -926,10 +926,10 @@ body,
 .colab__section-title-box {
   padding: 1rem;
   padding-right: 4rem;
-  background-color: var(--primary-color);
+  background-color: orange;
 }
 .colab__section-title {
-  color: white;
+  color: var(--primary-color);
   font-size: var(--ff-size-20);
   border-left: 1px solid white;
   padding-left: 2rem;
