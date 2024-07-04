@@ -1,54 +1,35 @@
 import Navfooter from "../components/navfooter";
-import Loader from "../components/loader";
+import AnimationLoader from "../hooks/useAnimationLoader";
 import NavBar from "../components/navbar";
+import { useState } from "react";
 
-import { useEffect, useState } from "react";
 const About = () => {
   const [loading, isLoading] = useState(true);
-  useEffect(() => {
-    const handleLoad = () => {
+  AnimationLoader(() => isLoading(false));
+
+  if (loading === true) {
+    setTimeout(() => {
       isLoading(false);
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
-
-  useEffect(() => {
-    const checkScreenWidth = () => {
-      if (window.innerWidth < 768 && loading === true) {
-        const timer = setTimeout(() => isLoading(false), 4000);
-        return () => clearTimeout(timer);
-      }
-    };
-    checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
-
-    return () => window.removeEventListener("resize", checkScreenWidth);
-  }, [loading]);
-  // if (loading === true) setTimeout(() => isLoading(false), 1000);
+    }, 4000);
+  }
   return (
     <main className="about__main">
-      {/* {loading ? (
-        <Loader />
-      ) : (
-        <> */}
       <NavBar />
-      <AboutSection />
+      <AboutSection loading={loading} />
       <GoalSection />
       <ExportSection />
       <ColabSection />
       <Navfooter />
-      {/* </>
-      )} */}
     </main>
   );
 };
-const AboutSection = () => {
+const AboutSection = ({ loading }) => {
   return (
     <section className="about__section">
-      <div className="founder__container">
+      <div
+        className={`founder__container ${!loading ? "founder__loaded" : ""}`}
+      >
+        <span className="overlay"></span>
         <div className="founder__container-img"></div>
         <div className="founder__container-info">
           <div className="founder__container-info-box">

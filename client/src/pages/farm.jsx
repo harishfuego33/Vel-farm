@@ -1,54 +1,31 @@
 import Navfooter from "../components/navfooter";
 import NavBar from "../components/navbar";
-import { useEffect, useState } from "react";
-import Loader from "../components/loader";
+import { useState } from "react";
+import AnimationLoader from "../hooks/useAnimationLoader";
 const Farms = () => {
   const [loading, isLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => isLoading(false), 2000);
-  // }, []);
-  useEffect(() => {
-    const handleLoad = () => {
-      isLoading(false);
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
-  useEffect(() => {
-    const checkScreenWidth = () => {
-      if (window.innerWidth < 768 && loading === true) {
-        const timer = setTimeout(() => isLoading(false), 4000);
-        return () => clearTimeout(timer);
-      }
-    };
-    checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
+  AnimationLoader(() => isLoading(false));
 
-    return () => window.removeEventListener("resize", checkScreenWidth);
-  }, [loading]);
-  // if (loading === true) setTimeout(() => isLoading(false), 1000);
+  if (loading === true) {
+    setTimeout(() => {
+      isLoading(false);
+    }, 4000);
+  }
+
   return (
     <main className="farm__main">
-      {/* {loading ? (
-        <Loader />
-      ) : (
-        <> */}
       <NavBar />
-      <FarmSection />
+      <FarmSection loading={loading} />
       <FarmGallery />
       <Navfooter />
-      {/* </>
-      )} */}
     </main>
   );
 };
 
-const FarmSection = () => {
+const FarmSection = ({ loading }) => {
   return (
     <section className="farm__section">
-      <div className="contact__title">
+      <div className={`farm__title ${!loading ? "loaded" : ""}`}>
         <h1 className="contact-h1">OUR FARMS</h1>
         <p className="greet__para">
           At Vel Farms, our coconuts thrive in fertile environments across

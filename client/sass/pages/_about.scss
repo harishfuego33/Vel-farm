@@ -15,6 +15,8 @@
   background-color: white;
   gap: 3rem;
   min-height: 70vh;
+  position: relative;
+  overflow: hidden;
   &-img {
     width: 30%;
     background-image: url("/public/assets/about/founder.webp");
@@ -46,6 +48,40 @@
     font-weight: 600;
     margin-top: 3rem;
     text-align: justify;
+  }
+}
+.founder__container {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+.founder__container.founder__loaded {
+  opacity: 1;
+}
+.founder__loaded .overlay {
+  animation: slider-left-to-right 0.8s;
+  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.overlay {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(
+    100deg,
+    var(--primary-color) 0%,
+    var(--primary-color) 60%,
+    orange 20%,
+    orange 100%
+  );
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  transform: translateX(calc(100% + 1px));
+}
+@keyframes slider-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% + 1px));
   }
 }
 .goal__section {

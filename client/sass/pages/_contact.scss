@@ -9,12 +9,29 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.contact__title {
-  z-index: 10;
+.contact__title,
+.location-link {
+  opacity: 0;
+}
+.contact__loaded .contact__title,
+.contact__loaded .location-link {
+  opacity: 1;
+}
+.contact__loaded .contact__title {
   font-size: 2rem;
-  position: relative;
   animation: slide-right 1s;
 }
+.contact__loaded .location-link {
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s;
+  animation: slide-left 1s;
+  &:hover {
+    transform: translateY(-1rem);
+  }
+}
+
 .contact-h1 {
   font-size: var(--ff-size-130);
   color: white;
@@ -42,16 +59,6 @@
   &-info {
     margin-top: 1rem;
     font-size: 1.4rem;
-  }
-  &-link {
-    text-decoration: none;
-    position: relative;
-    z-index: 10;
-    transition: transform 0.3s;
-    animation: slide-left 1s;
-    &:hover {
-      transform: translateY(-1rem);
-    }
   }
 }
 .contact {

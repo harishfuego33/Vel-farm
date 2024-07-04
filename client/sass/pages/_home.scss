@@ -22,7 +22,6 @@
   font-size: var(--ff-size-100);
   font-weight: 400;
   line-height: 1;
-  animation: slide-right 1s;
 }
 .greet__name {
   color: white;
@@ -30,8 +29,8 @@
   font-weight: 600;
   letter-spacing: 0.5rem;
   line-height: 1;
-  animation: slide-left 1s;
 }
+
 .greet__para {
   color: white;
   font-size: var(--ff-size-18);
@@ -46,7 +45,6 @@
   background-color: hsla(0, 0%, 100%, 0.135);
   border: none;
   border-radius: 5px;
-  animation: pop-up 1s;
   transition: all 0.3s;
 }
 .greet__btn:hover {
@@ -124,15 +122,12 @@
   padding-left: 2rem;
   margin-bottom: 0.5rem;
   font-size: var(--ff-size-18);
-  // background-color: var(--primary-color);
-  // color: white;
   color: var(--primary-color);
   background-color: orange;
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
 }
 .ag-para {
   font-size: var(--ff-size-14);
-  // color: var(--primary-color);
 }
 .ag-para:not(:last-child) {
   margin-bottom: 2rem;
@@ -143,4 +138,19 @@
   flex-direction: column;
   gap: 1rem;
   padding-block: 1rem;
+}
+.greet__section-article {
+  opacity: 0;
+}
+.greet__section-article.greet__loaded {
+  opacity: 1;
+}
+.greet__loaded .slide-right {
+  animation: slide-right 1s;
+}
+.greet__loaded .slide-left {
+  animation: slide-left 1s;
+}
+.greet__loaded .pop-up {
+  animation: pop-up 1s;
 }

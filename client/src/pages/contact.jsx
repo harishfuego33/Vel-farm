@@ -1,53 +1,29 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { SlLocationPin } from "react-icons/sl";
 import Navfooter from "../components/navfooter";
 import UseNotification from "../hooks/usenotification";
+import AnimationLoader from "../hooks/useAnimationLoader";
 import NavBar from "../components/navbar";
-import Loader from "../components/loader";
 
 const Contact = () => {
   const [loading, isLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => isLoading(false), 2000);
-  // }, []);
-  useEffect(() => {
-    const handleLoad = () => {
-      isLoading(false);
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
-  useEffect(() => {
-    const checkScreenWidth = () => {
-      if (window.innerWidth < 768 && loading === true) {
-        const timer = setTimeout(() => isLoading(false), 4000);
-        return () => clearTimeout(timer);
-      }
-    };
-    checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
+  AnimationLoader(() => isLoading(false));
 
-    return () => window.removeEventListener("resize", checkScreenWidth);
-  }, [loading]);
-  // if (loading === true) setTimeout(() => isLoading(false), 1000);
+  if (loading === true) {
+    setTimeout(() => {
+      isLoading(false);
+    }, 4000);
+  }
   return (
     <main className="contact__main">
-      {/* {loading ? (
-        <Loader />
-      ) : (
-        <> */}
       <NavBar />
-      <ContactSection />;
+      <ContactSection loading={loading} />;
       <Navfooter />
-      {/* </>
-      )} */}
     </main>
   );
 };
-const ContactSection = () => {
+const ContactSection = ({ loading }) => {
   const style = { height: "2.5rem", width: "2.5rem" };
   const [fullName, setFullName] = useState("");
   const [mailId, setMailId] = useState("");
@@ -109,7 +85,7 @@ const ContactSection = () => {
   return (
     <section className="contact__section">
       {NotificationComponent}
-      <div className="contact__img-box">
+      <div className={`contact__img-box ${!loading ? "contact__loaded" : ""}`}>
         <div className="contact__title">
           <h1 className="contact-h1">CONTACT US</h1>
         </div>

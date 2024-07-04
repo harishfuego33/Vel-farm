@@ -1,62 +1,41 @@
 import Navfooter from "../components/navfooter";
 import NavBar from "../components/navbar";
-import Loader from "../components/loader";
-import { useEffect, useState } from "react";
+import AnimationLoader from "../hooks/useAnimationLoader";
+import { useState } from "react";
 const Home = () => {
   const [loading, isLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => isLoading(false), 2000);
-  // }, []);
-  useEffect(() => {
-    const handleLoad = () => {
+  AnimationLoader(() => {
+    isLoading(false);
+  });
+  if (loading === true) {
+    setTimeout(() => {
       isLoading(false);
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
-  useEffect(() => {
-    const checkScreenWidth = () => {
-      if (window.innerWidth < 768 && loading === true) {
-        const timer = setTimeout(() => isLoading(false), 4000);
-        return () => clearTimeout(timer);
-      }
-    };
-    checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
-
-    return () => window.removeEventListener("resize", checkScreenWidth);
-  }, [loading]);
-  // if (loading === true) setTimeout(() => isLoading(false), 1000);
+    }, 4000);
+  }
   return (
     <main className="home__main">
-      {/* {loading ? (
-        <Loader />
-      ) : (
-        <> */}
       <NavBar />
-      <Greet />
+      <Greet loading={loading} />
       <AgricultureSustainability />
       <SuppliesCoconutVarieties />
       <MatureCoconutVarieties />
       <Navfooter />
-      {/* </>
-      )} */}
     </main>
   );
 };
-const Greet = () => {
+const Greet = ({ loading }) => {
   return (
     <section className="greet__section">
-      <article className="greet__section-article">
-        <h1 className="greet__welcome">WELCOME TO</h1>
-        <h1 className="greet__name">VEL FARMS</h1>
+      <article
+        className={`greet__section-article ${!loading ? "greet__loaded" : ""}`}
+      >
+        <h1 className="greet__welcome slide-right">WELCOME TO</h1>
+        <h1 className="greet__name slide-left ">VEL FARMS</h1>
         <p className="greet__para">
           we dedicated to providing the highest quality coconut products while
           maintaining sustainable farming practices.
         </p>
-        <a href="#agriculture__section" className="link">
+        <a href="#agriculture__section" className="link pop-up ">
           <button className="greet__btn">Learn More</button>
         </a>
       </article>

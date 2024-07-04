@@ -10,7 +10,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 8rem 6rem 6rem 6rem;
-  overflow-x: hidden;
+  overflow: hidden;
   &-sub {
     color: white;
     font-size: var(--ff-size-30);
@@ -31,17 +31,23 @@
 ._green {
   color: var(--secondary-color);
 }
-.slide-to-down {
+.display-inline-block {
   display: inline-block;
   margin-inline: 1rem;
+}
+.product__heading-box {
+  opacity: 0;
+}
+.loaded .product__heading-box {
+  opacity: 1;
+}
+.loaded .slide-to-down {
   animation: slide-top-down ease-out 1s forwards;
 }
-.slide-bottom-up {
-  display: inline-block;
+.loaded .slide-bottom-up {
   animation: slide-bottom-up ease-out 1s;
 }
-.slide-left-right {
-  display: inline-block;
+.loaded .slide-left-right {
   animation: slide-left-right ease-out 1s;
 }
 .product {

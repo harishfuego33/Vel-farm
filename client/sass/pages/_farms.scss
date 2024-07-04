@@ -10,6 +10,14 @@
   flex-wrap: wrap;
   min-height: 100vh;
 }
+.farm__title {
+  opacity: 0;
+  font-size: 2rem;
+}
+.farm__title.loaded {
+  opacity: 1;
+  animation: slide-right ease-out 1s;
+}
 .farm__gallery {
   &-cards {
     display: flex;

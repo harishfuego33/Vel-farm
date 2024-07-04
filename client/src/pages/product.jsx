@@ -1,64 +1,47 @@
 import { NavLink } from "react-router-dom";
 import NavFooter from "../components/navfooter";
 import NavBar from "../components/navbar";
-import { useEffect, useState } from "react";
-import Loader from "../components/loader";
+import AnimationLoader from "../hooks/useAnimationLoader";
+import { useState } from "react";
 const Product = () => {
   const [loading, isLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => isLoading(false), 2000);
-  // }, []);
-  useEffect(() => {
-    const handleLoad = () => {
+  AnimationLoader(() => {
+    isLoading(false);
+  });
+  if (loading === true) {
+    setTimeout(() => {
       isLoading(false);
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
-  useEffect(() => {
-    const checkScreenWidth = () => {
-      if (window.innerWidth < 768 && loading === true) {
-        const timer = setTimeout(() => isLoading(false), 4000);
-        return () => clearTimeout(timer);
-      }
-    };
-    checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
-
-    return () => window.removeEventListener("resize", checkScreenWidth);
-  }, [loading]);
-  // if (loading === true) setTimeout(() => isLoading(false), 1000);
+    }, 4000);
+  }
   return (
     <main className="product__main">
-      {/* {loading ? (
-        <Loader />
-      ) : (
-        <> */}
       <NavBar />
-      <ProductSection />
+      <ProductSection loading={loading} />
       <ProductList />
       <NavFooter />
-      {/* </>
-      )} */}
     </main>
   );
 };
-const ProductSection = () => {
+const ProductSection = ({ loading }) => {
   return (
-    <section className="product__section">
+    <section className={`product__section ${!loading ? "loaded" : ""}`}>
       <div className="product__heading-box">
         <h1 className="product__heading text-align-center">
-          <span className="slide-to-down">VEL</span>
-          <span className="slide-bottom-up _green">PRODUCTS</span>
+          <span className="display-inline-block slide-to-down ">VEL</span>
+          <span className="display-inline-block _green slide-bottom-up">
+            PRODUCTS
+          </span>
         </h1>
       </div>
       <div className="product__heading-box">
         <h3 className="product__section-sub">
-          <span className="slide-bottom-up"> our </span>
-          <span className="slide-to-down _green">premium </span>
-          <span className=" slide-left-right">coconut products</span>
+          <span className="display-inline-block slide-bottom-up">our</span>
+          <span className="display-inline-block _green slide-to-down ">
+            premium
+          </span>
+          <span className="display-inline-block slide-left-right ">
+            coconut products
+          </span>
         </h3>
       </div>
     </section>
@@ -111,8 +94,8 @@ const ProductList = () => {
   ];
   return (
     <section className="product__list">
-      {data.map((items) => (
-        <ProductCard key={Date.now()} {...items} />
+      {data.map((items, index) => (
+        <ProductCard key={index} {...items} />
       ))}
     </section>
   );
