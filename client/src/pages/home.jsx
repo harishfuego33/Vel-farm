@@ -14,7 +14,7 @@ const Home = () => {
   }
   return (
     <main className="home__main">
-      <NavBar />
+      <NavBar loading={loading} />
       <Greet loading={loading} />
       <AgricultureSustainability />
       <SuppliesCoconutVarieties />

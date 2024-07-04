@@ -15,7 +15,7 @@ const Product = () => {
   }
   return (
     <main className="product__main">
-      <NavBar />
+      <NavBar loading={loading} />
       <ProductSection loading={loading} />
       <ProductList />
       <NavFooter />

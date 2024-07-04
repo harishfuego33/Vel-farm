@@ -14,7 +14,7 @@ const Farms = () => {
 
   return (
     <main className="farm__main">
-      <NavBar />
+      <NavBar loading={loading} />
       <FarmSection loading={loading} />
       <FarmGallery />
       <Navfooter />

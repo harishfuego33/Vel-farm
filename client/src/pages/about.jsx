@@ -14,7 +14,7 @@ const About = () => {
   }
   return (
     <main className="about__main">
-      <NavBar />
+      <NavBar loading={loading} />
       <AboutSection loading={loading} />
       <GoalSection />
       <ExportSection />

@@ -17,7 +17,7 @@ const Contact = () => {
   }
   return (
     <main className="contact__main">
-      <NavBar />
+      <NavBar loading={loading} />
       <ContactSection loading={loading} />;
       <Navfooter />
     </main>

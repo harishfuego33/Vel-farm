@@ -39,6 +39,7 @@ body,
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  background-color: gray;
 }
 
 #root {
@@ -57,6 +58,9 @@ body,
   background-color: rgba(97, 97, 97, 0.4);
   backdrop-filter: blur(3px) brightness(110%);
   min-width: 320px;
+}
+
+.navbar__main.navbar__loaded {
   animation: slide-down 1s;
 }
 

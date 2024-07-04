@@ -1,13 +1,18 @@
 import { useState } from "react";
 import NavBtn from "./navbtn";
-const NavBar = () => {
+const NavBar = ({ loading }) => {
   const [active, setActive] = useState(false);
   return (
     <>
-      <nav className="navbar__main">
+      <nav className={`navbar__main ${!loading ? "navbar__loaded" : ""}`}>
         <div className="title-box">
           <div className="log-box">
-            <img src="/assets/logo.png" alt="farms-log" className="logo" />
+            <img
+              src="/assets/logo.png"
+              alt="farms-log"
+              className="logo"
+              loading="lazy"
+            />
           </div>
           <h2 className="main-title">VEL FARMS</h2>
         </div>
