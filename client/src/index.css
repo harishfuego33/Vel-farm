@@ -863,6 +863,7 @@ body,
   min-height: 70vh;
   position: relative;
   overflow: hidden;
+  background-color: white;
 }
 .founder__container-img {
   width: 30%;
