@@ -99,3 +99,12 @@
     opacity: 1;
   }
 }
+@keyframes block-reveal-text {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

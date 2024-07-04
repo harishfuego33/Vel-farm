@@ -35,11 +35,11 @@ const ProductSection = ({ loading }) => {
       </div>
       <div className="product__heading-box">
         <h3 className="product__section-sub">
-          <span className="display-inline-block slide-bottom-up">our</span>
-          <span className="display-inline-block _green slide-to-down ">
+          <span className="display-inline-block slide-bottom-up ">our</span>
+          <span className="display-inline-block _green slide-to-down m-l-1">
             premium
           </span>
-          <span className="display-inline-block slide-left-right ">
+          <span className="display-inline-block slide-left-right m-l-1">
             coconut products
           </span>
         </h3>

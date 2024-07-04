@@ -32,18 +32,6 @@
   color: var(--primary-color);
   background-color: white;
 }
-.breath {
-  animation: breath 1s infinite ease-in-out;
-}
-
-@keyframes breath {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.m-l-1 {
+  margin-left: 1rem;
 }
