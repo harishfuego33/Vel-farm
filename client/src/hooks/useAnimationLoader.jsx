@@ -4,9 +4,14 @@ const AnimationLoader = (callback) => {
     const handleLoad = () => {
       callback();
     };
+    const handleDOMContentLoaded = () => {
+      callback();
+    };
     window.addEventListener("load", handleLoad);
+    document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);
     return () => {
       window.removeEventListener("load", handleLoad);
+      document.removeEventListener("DOMContentLoaded", handleDOMContentLoaded);
     };
   }, [callback]);
 };

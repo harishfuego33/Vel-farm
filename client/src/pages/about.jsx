@@ -6,12 +6,13 @@ import { useState } from "react";
 const About = () => {
   const [loading, isLoading] = useState(true);
   AnimationLoader(() => isLoading(false));
+  // AnimationLoader(() => isLoading(false));
 
-  if (loading === true) {
-    setTimeout(() => {
-      isLoading(false);
-    }, 4000);
-  }
+  // if (loading === true) {
+  //   setTimeout(() => {
+  //     isLoading(false);
+  //   }, 2000);
+  // }
   return (
     <main className="about__main">
       <NavBar loading={loading} />
