@@ -39,7 +39,7 @@ body,
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  background-color: gray;
+  background-color: var(--secondary-color);
 }
 
 #root {
@@ -58,9 +58,11 @@ body,
   background-color: rgba(97, 97, 97, 0.4);
   backdrop-filter: blur(3px) brightness(110%);
   min-width: 320px;
+  opacity: 0;
 }
 
 .navbar__main.navbar__loaded {
+  opacity: 1;
   animation: slide-down 1s;
 }
 
@@ -354,6 +356,7 @@ body,
   overflow-x: hidden;
   min-width: 320px;
   position: relative;
+  background-color: white;
 }
 
 .cards {
