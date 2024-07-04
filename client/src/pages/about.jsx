@@ -69,7 +69,7 @@ const GoalSection = () => {
           <div className="goal__card-description">
             <p>
               &quot;Welcome to Vel Farms, where our passion for coconuts began
-              generations ago. Nestled in the heart of India's lush coconut
+              generations ago. Nestled in the heart of India&quot;s lush coconut
               regions, our journey started with a simple vision: to cultivate
               the finest coconuts using sustainable practices. Today, we proudly
               continue this tradition, delivering pure, natural goodness from
