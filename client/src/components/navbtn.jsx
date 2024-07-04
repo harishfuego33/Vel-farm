@@ -10,7 +10,9 @@ const NavBtn = ({ name, to, active, setActive, classN = "underlined" }) => {
   };
   return (
     <NavLink style={style} to={to} onClick={() => setActive(!active)}>
-      <li className={`nav-bar__option ${pathactive ? classN : ""}`}>{name}</li>
+      <div className={`nav-bar__option ${pathactive ? classN : ""}`}>
+        {name}
+      </div>
     </NavLink>
   );
 };

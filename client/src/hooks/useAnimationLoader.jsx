@@ -2,11 +2,9 @@ import { useEffect } from "react";
 const AnimationLoader = (callback) => {
   useEffect(() => {
     const handleLoad = () => {
-      console.log("desktop");
       callback();
     };
     const handleDOMContentLoaded = () => {
-      console.log("mobile");
       callback();
     };
     document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);

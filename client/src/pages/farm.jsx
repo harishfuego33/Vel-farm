@@ -6,7 +6,7 @@ const Farms = () => {
   const [loading, isLoading] = useState(true);
   AnimationLoader(() => isLoading(false));
 
-  if (loading === true && window.innerWidth < 768) {
+  if (loading === true) {
     setTimeout(() => {
       isLoading(false);
     }, 2000);
