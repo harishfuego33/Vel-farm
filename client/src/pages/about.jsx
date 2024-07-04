@@ -8,11 +8,11 @@ const About = () => {
   AnimationLoader(() => isLoading(false));
   // AnimationLoader(() => isLoading(false));
 
-  // if (loading === true) {
-  //   setTimeout(() => {
-  //     isLoading(false);
-  //   }, 2000);
-  // }
+  if (loading === true && window.innerWidth < 768) {
+    setTimeout(() => {
+      isLoading(false);
+    }, 2000);
+  }
   return (
     <main className="about__main">
       <NavBar loading={loading} />

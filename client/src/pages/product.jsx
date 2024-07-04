@@ -8,12 +8,11 @@ const Product = () => {
   AnimationLoader(() => {
     isLoading(false);
   });
-
-  // if (loading === true) {
-  //   setTimeout(() => {
-  //     isLoading(false);
-  //   }, 2000);
-  // }
+  if (loading === true && window.innerWidth < 768) {
+    setTimeout(() => {
+      isLoading(false);
+    }, 2000);
+  }
   return (
     <main className="product__main">
       <NavBar loading={loading} />
