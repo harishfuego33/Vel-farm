@@ -21,10 +21,10 @@ const Navfooter = () => {
           <NavLink style={style} to={"/"}>
             <li className="footer__unordered-list">HOME</li>
           </NavLink>
-          <NavLink style={style} to={"/farm"}>
+          <NavLink style={style} to={"/farms"}>
             <li className="footer__unordered-list">FARMS</li>
           </NavLink>
-          <NavLink style={style} to={"/product"}>
+          <NavLink style={style} to={"/products"}>
             <li className="footer__unordered-list">PRODUCT</li>
           </NavLink>
           <NavLink style={style} to={"/about"}>

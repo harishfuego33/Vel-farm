@@ -904,7 +904,7 @@ body,
 .founder__loaded .founder__container-img,
 .founder__loaded .founder__container-info {
   animation: block-reveal-text 0s;
-  animation-delay: 0.4s;
+  animation-delay: 0.8s;
   animation-fill-mode: forwards;
   will-change: transform, opacity;
 }
@@ -913,14 +913,14 @@ body,
   display: block;
   position: absolute;
   background-image: linear-gradient(100deg, var(--primary-color) 0%, var(--primary-color) 60%, orange 20%, orange 100%);
-  width: 100%;
+  width: 250%;
   height: 100%;
   transform: translateX(calc(100% + 1px));
   z-index: 99;
 }
 
 .founder__loaded .overlay {
-  animation: slider-left-to-right 0.8s;
+  animation: slider-left-to-right 1.6s;
   animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 

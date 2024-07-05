@@ -18,8 +18,8 @@ const NavBar = ({ loading }) => {
         </div>
         <ul className="nav-bar__options ">
           <NavBtn name={"Home"} to={"/"} />
-          <NavBtn name={"Farms"} to={"/farm"} />
-          <NavBtn name={"Product"} to={"/product"} />
+          <NavBtn name={"Farms"} to={"/farms"} />
+          <NavBtn name={"Products"} to={"/products"} />
           <NavBtn name={"About us"} to={"/about"} />
           <NavBtn name={"Contact us"} to={"/contact"} />
         </ul>
@@ -49,15 +49,15 @@ const SlideIn = ({ active, setActive }) => {
           classN=" underlined-green"
         />
         <NavBtn
-          name={"Farms"}
-          to={"/farm"}
+          name={"Farm"}
+          to={"/farms"}
           active={active}
           setActive={setActive}
           classN=" underlined-green"
         />
         <NavBtn
-          name={"Product"}
-          to={"/product"}
+          name={"Products"}
+          to={"/products"}
           active={active}
           setActive={setActive}
           classN=" underlined-green"
